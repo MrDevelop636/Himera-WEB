@@ -20,15 +20,21 @@ jobs:
         with:
           node-version: 20
 
-      # 3. Instalacja zależności frontu
+      # 3. Konfiguracja użytkownika git (rozwiązuje błąd commit w postbuild)
+      - name: Configure Git user
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+
+      # 4. Instalacja zależności frontu
       - name: Install dependencies
         run: npm ci
 
-      # 4. Build frontu
+      # 5. Build frontu
       - name: Build Vite project
         run: npm run build
 
-      # 5. Deploy frontend do public_html
+      # 6. Deploy frontend do public_html
       - name: Deploy frontend via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
@@ -40,7 +46,7 @@ jobs:
           state-name: .ftp-deploy-sync-state-frontend.json
           dangerous-clean-slate: false
 
-      # 6. Deploy backend PHP do public_html/api
+      # 7. Deploy backend PHP do public_html/api
       - name: Deploy backend via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
