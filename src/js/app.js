@@ -3,7 +3,7 @@
 import CustomCursor from "./animation/cursor.min.js";
 import initScrollAnimations from "./animation/scroll.min.js";
 import initModelsSlider from "./components/slider.min.js";
-import initNavbar from "./ui/navbar.min.js";
+import initNavbar from "./ui/navbar.js";
 import initThemeToggle from "./ui/theme.min.js";
 import initFormAnimations from "./ui/forms.min.js";
 
