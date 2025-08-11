@@ -1,0 +1,36 @@
+/* Custom Cursor */
+.cursor {
+  position: fixed;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: rgba(var(--color-accent), 0.8);
+  pointer-events: none;
+  mix-blend-mode: difference;
+  z-index: 9999;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.15s var(--ease-out-expo),
+    width 0.2s var(--ease-out-expo), height 0.2s var(--ease-out-expo),
+    background-color 0.3s var(--ease-out-expo);
+}
+
+.cursor--active {
+  transform: translate(-50%, -50%) scale(1.8);
+  background-color: rgba(var(--color-primary), 0.6);
+}
+
+.cursor--hidden {
+  opacity: 0;
+}
+
+.cursor--text {
+  transform: translate(-50%, -50%) scale(2.5);
+  background-color: rgba(var(--color-accent), 0.3);
+  backdrop-filter: blur(2px);
+}
+
+.cursor--media {
+  transform: translate(-50%, -50%) scale(2);
+  background-color: rgba(var(--color-light), 0.1);
+  border: 2px solid rgba(var(--color-accent), 0.8);
+}

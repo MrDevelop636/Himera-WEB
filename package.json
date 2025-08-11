@@ -1,0 +1,20 @@
+{
+  "name": "himera-web",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "postbuild": "git add . && git commit -m 'Automatic build commit' && git push",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^7.1.0"
+  },
+  "dependencies": {
+    "@splidejs/splide": "^4.1.4",
+    "gsap": "^3.13.0",
+    "three": "^0.179.1"
+  }
+}
