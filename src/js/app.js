@@ -1,5 +1,5 @@
 // src/js/app.js
-import simulateLoading from "./animation/loader.js";
+// import simulateLoading from "./animation/loader.js";
 import CustomCursor from "./animation/cursor.js";
 import initScrollAnimations from "./animation/scroll.js";
 import initModelsSlider from "./components/slider.js";
@@ -9,7 +9,7 @@ import initFormAnimations from "./ui/forms.js";
 
 // Inicjalizacja
 document.addEventListener("DOMContentLoaded", () => {
-  simulateLoading();
+  // simulateLoading();
   new CustomCursor();
   initScrollAnimations();
   initNavbar();
