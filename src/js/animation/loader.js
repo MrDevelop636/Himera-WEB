@@ -4,7 +4,7 @@ function simulateLoading() {
 
   let progress = 0;
   const interval = setInterval(() => {
-    progress += Math.random() * 10;
+    progress += Math.random() * 80;
     if (progress >= 100) {
       progress = 100;
       clearInterval(interval);
