@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "postbuild": "git add . && git commit -m 'Automatic build commit' && git push",
+    "postbuild": "git add . && git diff --cached --quiet || (git commit -m 'Automatic build commit' && git push)",
     "preview": "vite preview"
   },
   "devDependencies": {
