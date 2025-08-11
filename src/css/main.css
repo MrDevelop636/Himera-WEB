@@ -2,6 +2,7 @@
 @import "./base/_reset.min.css";
 @import "./base/_variables.min.css";
 @import "./base/_typography.min.css";
+@import "./base/_fonts.min.css";
 
 /* Components */
 @import "./components/_buttons.min.css";
