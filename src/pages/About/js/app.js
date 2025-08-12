@@ -12,10 +12,10 @@ import initScrollAnimations2 from "./animation/about.js";
 document.addEventListener("DOMContentLoaded", () => {
   // simulateLoading();
   new CustomCursor();
-  initScrollAnimations2();
+  initScrollAnimations();
   initNavbar();
   initThemeToggle();
   initModelsSlider();
   initFormAnimations();
-
+  initScrollAnimations2();
 });
