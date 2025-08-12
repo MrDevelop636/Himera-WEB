@@ -80,3 +80,26 @@
     font-size: clamp(2.5rem, 10vw, 4rem);
   }
 }
+    @media (max-width: 1024px) {
+      .mission-vision__grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .team__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .team__grid {
+        grid-template-columns: 1fr;
+      }
+
+      .core-values {
+        padding: 6rem 0;
+      }
+
+      .core-values .section__header {
+        margin-bottom: 3rem;
+      }
+    }

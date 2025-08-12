@@ -17,5 +17,4 @@ document.addEventListener("DOMContentLoaded", () => {
   initThemeToggle();
   initModelsSlider();
   initFormAnimations();
-  initScrollAnimations2();
 });
