@@ -1,0 +1,148 @@
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// Rejestracja pluginów (tylko raz)
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
+
+function initScrollAnimations() {
+  // Hero section
+  const heroAnimations = () => {
+    gsap.to(".hero__title", {
+      scrollTrigger: {
+        trigger: ".hero",
+        start: "top top",
+        toggleActions: "play none none none",
+      },
+      opacity: 1,
+      y: 0,
+      duration: 1.2,
+      ease: "power3.out",
+    });
+
+    gsap.to(".hero__subtitle", {
+      scrollTrigger: {
+        trigger: ".hero",
+        start: "top top",
+        toggleActions: "play none none none",
+      },
+      opacity: 1,
+      y: 0,
+      duration: 1.2,
+      delay: 0.3,
+      ease: "power3.out",
+    });
+
+    gsap.to(".hero__cta", {
+      scrollTrigger: {
+        trigger: ".hero",
+        start: "top top",
+        toggleActions: "play none none none",
+      },
+      opacity: 1,
+      y: 0,
+      duration: 1.2,
+      delay: 0.6,
+      ease: "power3.out",
+    });
+
+    gsap.to(".hero__model", {
+      scrollTrigger: {
+        trigger: ".hero",
+        start: "top top",
+        toggleActions: "play none none none",
+      },
+      opacity: 1,
+      duration: 1.5,
+      delay: 0.9,
+      ease: "power3.out",
+    });
+  };
+
+  // About section
+  const aboutAnimations = () => {
+    gsap.to(".about__content", {
+      scrollTrigger: {
+        trigger: ".about",
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+      opacity: 1,
+      x: 0,
+      duration: 1,
+      ease: "power3.out",
+    });
+
+    gsap.to(".about__media", {
+      scrollTrigger: {
+        trigger: ".about",
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+      opacity: 1,
+      x: 0,
+      duration: 1,
+      delay: 0.3,
+      ease: "power3.out",
+    });
+
+    gsap.to(".about__stat", {
+      scrollTrigger: {
+        trigger: ".about",
+        start: "top 70%",
+        toggleActions: "play none none none",
+      },
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      stagger: 0.1,
+      ease: "power3.out",
+    });
+  };
+
+  // Technology cards
+  const techAnimations = () => {
+    gsap.to(".tech-card", {
+      scrollTrigger: {
+        trigger: ".technology",
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      stagger: 0.2,
+      ease: "power3.out",
+    });
+  };
+
+  // Models slider
+  const modelsAnimations = () => {
+    gsap.to(".models__slider", {
+      scrollTrigger: {
+        trigger: ".models",
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+      opacity: 1,
+      duration: 1.2,
+      ease: "power3.out",
+    });
+  };
+
+  // Inicjalizacja wszystkich animacji
+  const initAllAnimations = () => {
+    heroAnimations();
+    aboutAnimations();
+    techAnimations();
+    modelsAnimations();
+  };
+
+  // Zabezpieczenie przed wykonaniem na serwerze
+  if (typeof window !== "undefined") {
+    initAllAnimations();
+  }
+}
+
+export default initScrollAnimations;
