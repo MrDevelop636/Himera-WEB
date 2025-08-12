@@ -1,26 +1,33 @@
-async function sendEmail(email, subject, message) {
+// src/js/api/email.js
+export default async function sendEmail(email, subject, message) {
   try {
     const response = await fetch('/api/email.php', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ email, subject, message })
+      body: JSON.stringify({
+        email: email,
+        subject: subject,
+        message: message
+      })
     });
 
-    const result = await response.json();
+    const data = await response.json();
 
-    if (response.ok) {
-      console.log('Sukces:', result.success);
-      // Tutaj można wyświetlić potwierdzenie użytkownikowi
-    } else {
-      console.error('Błąd serwera:', result.error);
-      // Obsługa błędów (np. pokazanie komunikatu użytkownikowi)
+    if (!response.ok) {
+      return {
+        success: false,
+        error: data.error || 'Wystąpił błąd serwera'
+      };
     }
+
+    return {
+      success: true,
+      message: data.success || 'Wiadomość wysłana pomyślnie'
+    };
   } catch (error) {
-    console.error('Błąd sieci:', error);
-    // Obsługa błędu sieciowego
+    console.error('Network error:', error);
+    throw error;
   }
 }
-
-// Przykładowe wywołanie:

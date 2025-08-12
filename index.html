@@ -510,6 +510,46 @@
         </div>
       </footer>
 
+<script>
+document.querySelector('.contact__form').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const name = document.querySelector('#name').value.trim();
+    const email = document.querySelector('#email').value.trim();
+    const interest = document.querySelector('#interest').value.trim();
+    const message = document.querySelector('#message').value.trim();
+
+    // Składamy temat i treść wiadomości
+    const subject = `Formularz kontaktowy - ${interest || 'Zapytanie'}`;
+    const bodyMessage = `Imię i nazwisko: ${name}\nEmail: ${email}\nTemat: ${interest}\n\nWiadomość:\n${message}`;
+
+    try {
+        const response = await fetch('/api/email.php', { // <-- Ścieżka do Twojego skryptu PHP
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                email: 'matix2025xx@gmail.com', // adres odbiorcy zdefiniowany w PHP
+                subject: subject,
+                message: bodyMessage
+            })
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+            alert('Wiadomość została wysłana pomyślnie.');
+            e.target.reset();
+        } else {
+            alert(`Błąd: ${result.error || 'Nie udało się wysłać wiadomości.'}`);
+        }
+    } catch (error) {
+        alert('Wystąpił problem z połączeniem z serwerem.');
+        console.error(error);
+    }
+});
+</script>
 
     </body>
   </html>
