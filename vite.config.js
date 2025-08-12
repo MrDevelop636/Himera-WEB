@@ -29,17 +29,19 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: resolve(__dirname, "dist"),
+    outDir: resolve(__dirname, "dist"),   // ważne - folder wyjściowy
     emptyOutDir: true,
     assetsInlineLimit: 0,
     rollupOptions: {
       input: {
-        main: resolve(__dirname, "src/pages/index.html"),
-        about: resolve(__dirname, "src/pages/about.html"),
-        services: resolve(__dirname, "src/pages/services.html"),
+      main: resolve(__dirname, './src/pages/index.html'),
+      about: resolve(__dirname, './src/pages/about.html'),
+      services: resolve(__dirname, './src/pages/services.html')
+    }
       },
       output: {
         assetFileNames: (assetInfo) => {
+          // Pobieramy rozszerzenie (ostatnią część po kropce)
           const extType = assetInfo.name.split(".").pop();
           if (/png|jpe?g|svg|gif|webp|avif|ico|bmp|tiff/i.test(extType)) {
             return "assets/images/[name]-[hash][extname]";
@@ -65,4 +67,4 @@ export default defineConfig({
       },
     },
   },
-});
+);
