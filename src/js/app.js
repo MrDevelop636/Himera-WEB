@@ -6,6 +6,7 @@ import initModelsSlider from "./components/slider.min.js";
 import initNavbar from "./ui/navbar.min.js";
 import initThemeToggle from "./ui/theme.min.js";
 import initFormAnimations from "./ui/forms.min.js";
+import initScrollAnimations2 from "./animation/about.js";
 
 // Inicjalizacja
 document.addEventListener("DOMContentLoaded", () => {
@@ -16,4 +17,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initThemeToggle();
   initModelsSlider();
   initFormAnimations();
+  initScrollAnimations2();
 });

@@ -57,3 +57,15 @@ jobs:
           server-dir: /public_html/api/
           state-name: .ftp-deploy-sync-state-backend.json
           dangerous-clean-slate: false
+
+
+      - name: Deploy libs via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./lib/
+          server-dir: /public_html/lib/
+          state-name: .ftp-deploy-sync-state-backend.json
+          dangerous-clean-slate: false
