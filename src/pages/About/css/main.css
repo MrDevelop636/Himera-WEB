@@ -8,11 +8,11 @@
 @import "./components/_buttons.min.css";
 @import "./components/_cursor.min.css";
 @import "./components/_cards.min.css";
-@import "./components/_timeline.css";
-@import "./components/_mission.css";
-@import "./components/_team.css";
-@import "./components/_tech.css";
-@import "./components/_core.css";
+@import "./components/_timeline.min.css";
+@import "./components/_mission.min.css";
+@import "./components/_team.min.css";
+@import "./components/_tech.min.css";
+@import "./components/_core.min.css";
 
 /* Layout */
 @import "./layout/_about.min.css";
