@@ -8,39 +8,55 @@ export default defineConfig({
       webp: { quality: 10 },
     }),
   ],
+  optimizeDeps: {
+    include: ["gsap", "three", "@splidejs/splide"],
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "./src/css/base/_variables.css";`,
+      },
+    },
+  },
+  resolve: {
+    alias: {
+      "@": resolve(__dirname, "./src"),
+      "@css": resolve(__dirname, "./src/css"),
+      "@js": resolve(__dirname, "./src/js"),
+      "@components": resolve(__dirname, "./src/js/components"),
+      "@animation": resolve(__dirname, "./src/js/animation"),
+      "@ui": resolve(__dirname, "./src/js/ui"),
+    },
+  },
   build: {
     rollupOptions: {
       input: {
-        index: resolve(__dirname, "index.html"),
-        about: resolve(__dirname, "src/pages/about.html"),
-        services: resolve(__dirname, "src/pages/services.html"),
+        main: resolve(__dirname, "index.html"),
       },
       output: {
         assetFileNames: (assetInfo) => {
-          const path = assetInfo.name;
-          
-          // Specjalna obsługa plików HTML
-          if (path.endsWith('.html')) {
-            // Wyciągamy tylko nazwę pliku (bez ścieżki)
-            const fileName = path.split('/').pop();
-            return fileName;
-          }
-
-          // Domyślna obsługa innych assetów
-          const extType = path.split('.').pop();
-          if (/png|jpe?g|svg|gif|webp/i.test(extType)) {
-            return 'assets/images/[name]-[hash][extname]';
+          let extType = assetInfo.name.split(".").at(1);
+          if (/png|jpe?g|svg|gif|webp|avif|ico|bmp|tiff/i.test(extType)) {
+            return "assets/images/[name]-[hash][extname]";
           }
           if (/css/i.test(extType)) {
-            return 'assets/css/[name]-[hash][extname]';
+            return "assets/css/[name]-[hash][extname]";
           }
           if (/woff2?|eot|ttf|otf/i.test(extType)) {
-            return 'assets/fonts/[name]-[hash][extname]';
+            return "assets/fonts/[name]-[hash][extname]";
           }
-          return 'assets/[name]-[hash][extname]';
+          if (/js/i.test(extType)) {
+            return "assets/js/[name]-[hash][extname]";
+          }
+          return "assets/[name]-[hash][extname]";
         },
-        entryFileNames: 'assets/js/[name]-[hash].js',
-        chunkFileNames: 'assets/js/[name]-[hash].js',
+        chunkFileNames: "assets/js/[name]-[hash].js",
+        entryFileNames: "assets/js/[name]-[hash].js",
+        manualChunks(id) {
+          if (id.includes("node_modules")) {
+            return "vendor";
+          }
+        },
       },
     },
     assetsInlineLimit: 0,
