@@ -31,14 +31,14 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: resolve(__dirname, "index.html"),
+        index: resolve(__dirname, "index.html"),
         about: resolve(__dirname, "src/pages/about.html"),
-        // dodaj kolejne podstrony w ten sam sposób
-        // contact: resolve(__dirname, "src/pages/contact.html"),
       },
       output: {
+        entryFileNames: "assets/js/[name]-[hash].js",
+        chunkFileNames: "assets/js/[name]-[hash].js",
         assetFileNames: (assetInfo) => {
-          let extType = assetInfo.name.split(".").at(1);
+          const extType = assetInfo.name.split(".").at(1);
           if (/png|jpe?g|svg|gif|webp|avif|ico|bmp|tiff/i.test(extType)) {
             return "assets/images/[name]-[hash][extname]";
           }
@@ -52,13 +52,6 @@ export default defineConfig({
             return "assets/js/[name]-[hash][extname]";
           }
           return "assets/[name]-[hash][extname]";
-        },
-        chunkFileNames: "assets/js/[name]-[hash].js",
-        entryFileNames: "assets/js/[name]-[hash].js",
-        manualChunks(id) {
-          if (id.includes("node_modules")) {
-            return "vendor";
-          }
         },
       },
     },
