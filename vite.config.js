@@ -5,9 +5,7 @@ import viteImagemin from "vite-plugin-imagemin";
 export default defineConfig({
   plugins: [
     viteImagemin({
-      webp: {
-        quality: 10,
-      },
+      webp: { quality: 10 },
     }),
   ],
   optimizeDeps: {
@@ -32,6 +30,12 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
+      input: {
+        main: resolve(__dirname, "index.html"),
+        about: resolve(__dirname, "src/pages/about.html"),
+        // dodaj kolejne podstrony w ten sam sposób
+        // contact: resolve(__dirname, "src/pages/contact.html"),
+      },
       output: {
         assetFileNames: (assetInfo) => {
           let extType = assetInfo.name.split(".").at(1);
