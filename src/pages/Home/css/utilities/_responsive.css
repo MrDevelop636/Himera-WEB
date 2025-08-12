@@ -80,3 +80,8 @@
     font-size: clamp(2.5rem, 10vw, 4rem);
   }
 }
+  @media (max-width: 768px) {
+    .social-bubbles {
+      right: 10px;
+    }
+  }

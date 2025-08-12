@@ -3,11 +3,13 @@
 @import "./base/_variables.min.css";
 @import "./base/_typography.min.css";
 @import "./base/_fonts.min.css";
+@import "./base/_scroll.min.css";
 
 /* Components */
 @import "./components/_buttons.min.css";
 @import "./components/_cursor.min.css";
 @import "./components/_cards.min.css";
+@import "./components/_bubble.min.css";
 
 /* Layout */
 @import "./layout/_about.min.css";

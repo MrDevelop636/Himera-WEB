@@ -106,3 +106,11 @@
 .about__media:hover .about__image {
   filter: grayscale(0) contrast(100%);
 }
+.about__stat-value {
+  font-size: 2rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.about__stat-value.active {
+  color: #ff0055; /* podświetlenie w trakcie animacji */
+}
