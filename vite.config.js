@@ -30,17 +30,21 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-input: {
-  index: resolve(__dirname, "index.html"),
-  about: resolve(__dirname, "src/pages/about.html"),
-  contact: resolve(__dirname, "src/pages/services.html"),
-},
+      input: {
+        index: resolve(__dirname, "index.html"),
+        about: resolve(__dirname, "src/pages/about.html"),
+        services: resolve(__dirname, "src/pages/services.html"), // Poprawione z `contact` na `services`
       },
       output: {
         entryFileNames: "assets/js/[name]-[hash].js",
         chunkFileNames: "assets/js/[name]-[hash].js",
         assetFileNames: (assetInfo) => {
           const extType = assetInfo.name.split(".").at(1);
+          
+          // Przenieś pliki HTML do głównego folderu `dist/`
+          if (/html/i.test(extType)) {
+            return "[name][extname]"; // np. `about.html` zamiast `src/pages/about.html`
+          }
           if (/png|jpe?g|svg|gif|webp|avif|ico|bmp|tiff/i.test(extType)) {
             return "assets/images/[name]-[hash][extname]";
           }
@@ -60,4 +64,4 @@ input: {
     assetsInlineLimit: 0,
     emptyOutDir: true,
   },
-);
+});
