@@ -38,11 +38,11 @@ function initModelsSlider() {
 
   // Dodatkowe eventy
   splide.on("mounted", () => {
-    console.log("Slider został zamontowany");
+
   });
 
   splide.on("move", (newIndex) => {
-    console.log(`Przesunięto do slajdu ${newIndex}`);
+
   });
 
   splide.mount();
