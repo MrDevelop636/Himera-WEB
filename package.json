@@ -17,6 +17,7 @@
   "dependencies": {
     "@splidejs/splide": "^4.1.4",
     "gsap": "^3.13.0",
-    "three": "^0.179.1"
+    "three": "^0.179.1",
+    "vite-plugin-mpa": "^1.2.0"
   }
 }
