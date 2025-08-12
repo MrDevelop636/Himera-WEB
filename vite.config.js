@@ -30,10 +30,11 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      input: {
-        main: resolve(__dirname, "index.html"),
-        about: resolve(__dirname, "src/pages/about.html"),
-        services: resolve(__dirname, "src/pages/services.html"),
+input: {
+  main: resolve(__dirname, "index.html"),
+  about: resolve(__dirname, "src/pages/about.html"),
+  services: resolve(__dirname, "src/pages/services.html"),
+},
       },
       output: {
         assetFileNames: (assetInfo) => {
@@ -64,4 +65,4 @@ export default defineConfig({
     assetsInlineLimit: 0,
     emptyOutDir: true,
   },
-});
+);
