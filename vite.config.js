@@ -8,44 +8,27 @@ export default defineConfig({
       webp: { quality: 10 },
     }),
   ],
-  optimizeDeps: {
-    include: ["gsap", "three", "@splidejs/splide"],
-  },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: `@import "./src/css/base/_variables.css";`,
-      },
-    },
-  },
-  resolve: {
-    alias: {
-      "@": resolve(__dirname, "./src"),
-      "@css": resolve(__dirname, "./src/css"),
-      "@js": resolve(__dirname, "./src/js"),
-      "@components": resolve(__dirname, "./src/js/components"),
-      "@animation": resolve(__dirname, "./src/js/animation"),
-      "@ui": resolve(__dirname, "./src/js/ui"),
-    },
-  },
   build: {
     rollupOptions: {
       input: {
         index: resolve(__dirname, "index.html"),
         about: resolve(__dirname, "src/pages/about.html"),
-        services: resolve(__dirname, "src/pages/services.html"), // Poprawione z `contact` na `services`
+        services: resolve(__dirname, "src/pages/services.html"),
       },
       output: {
-        entryFileNames: "assets/js/[name]-[hash].js",
-        chunkFileNames: "assets/js/[name]-[hash].js",
+        // Pozostałe ustawienia assetów (CSS, JS, obrazy itd.)
         assetFileNames: (assetInfo) => {
-          const extType = assetInfo.name.split(".").at(1);
-          
-          // Przenieś pliki HTML do głównego folderu `dist/`
-          if (/html/i.test(extType)) {
-            return "[name][extname]"; // np. `about.html` zamiast `src/pages/about.html`
+          const filename = assetInfo.name;
+
+          // Przenieś pliki HTML do głównego folderu dist/
+          if (filename.endsWith(".html")) {
+            const baseName = filename.split("/").pop(); // wyciąga "about.html" z "src/pages/about.html"
+            return baseName;
           }
-          if (/png|jpe?g|svg|gif|webp|avif|ico|bmp|tiff/i.test(extType)) {
+
+          // Reszta assetów (obrazy, czcionki, CSS, JS)
+          const extType = filename.split(".").pop();
+          if (/png|jpe?g|svg|gif|webp/i.test(extType)) {
             return "assets/images/[name]-[hash][extname]";
           }
           if (/css/i.test(extType)) {
@@ -54,11 +37,10 @@ export default defineConfig({
           if (/woff2?|eot|ttf|otf/i.test(extType)) {
             return "assets/fonts/[name]-[hash][extname]";
           }
-          if (/js/i.test(extType)) {
-            return "assets/js/[name]-[hash][extname]";
-          }
           return "assets/[name]-[hash][extname]";
         },
+        entryFileNames: "assets/js/[name]-[hash].js",
+        chunkFileNames: "assets/js/[name]-[hash].js",
       },
     },
     assetsInlineLimit: 0,
