@@ -16,31 +16,31 @@ export default defineConfig({
         services: resolve(__dirname, "src/pages/services.html"),
       },
       output: {
-        // Pozostałe ustawienia assetów (CSS, JS, obrazy itd.)
         assetFileNames: (assetInfo) => {
-          const filename = assetInfo.name;
-
-          // Przenieś pliki HTML do głównego folderu dist/
-          if (filename.endsWith(".html")) {
-            const baseName = filename.split("/").pop(); // wyciąga "about.html" z "src/pages/about.html"
-            return baseName;
+          const path = assetInfo.name;
+          
+          // Specjalna obsługa plików HTML
+          if (path.endsWith('.html')) {
+            // Wyciągamy tylko nazwę pliku (bez ścieżki)
+            const fileName = path.split('/').pop();
+            return fileName;
           }
 
-          // Reszta assetów (obrazy, czcionki, CSS, JS)
-          const extType = filename.split(".").pop();
+          // Domyślna obsługa innych assetów
+          const extType = path.split('.').pop();
           if (/png|jpe?g|svg|gif|webp/i.test(extType)) {
-            return "assets/images/[name]-[hash][extname]";
+            return 'assets/images/[name]-[hash][extname]';
           }
           if (/css/i.test(extType)) {
-            return "assets/css/[name]-[hash][extname]";
+            return 'assets/css/[name]-[hash][extname]';
           }
           if (/woff2?|eot|ttf|otf/i.test(extType)) {
-            return "assets/fonts/[name]-[hash][extname]";
+            return 'assets/fonts/[name]-[hash][extname]';
           }
-          return "assets/[name]-[hash][extname]";
+          return 'assets/[name]-[hash][extname]';
         },
-        entryFileNames: "assets/js/[name]-[hash].js",
-        chunkFileNames: "assets/js/[name]-[hash].js",
+        entryFileNames: 'assets/js/[name]-[hash].js',
+        chunkFileNames: 'assets/js/[name]-[hash].js',
       },
     },
     assetsInlineLimit: 0,
