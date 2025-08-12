@@ -32,6 +32,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
+        about: resolve(__dirname, "src/pages/about.html"),
+        services: resolve(__dirname, "src/pages/services.html"),
       },
       output: {
         assetFileNames: (assetInfo) => {
