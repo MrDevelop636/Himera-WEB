@@ -30,9 +30,11 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      input: {
-        index: resolve(__dirname, "index.html"),
-        about: resolve(__dirname, "src/pages/about.html"),
+input: {
+  index: resolve(__dirname, "index.html"),
+  about: resolve(__dirname, "src/pages/about.html"),
+  contact: resolve(__dirname, "src/pages/services.html"),
+},
       },
       output: {
         entryFileNames: "assets/js/[name]-[hash].js",
@@ -58,4 +60,4 @@ export default defineConfig({
     assetsInlineLimit: 0,
     emptyOutDir: true,
   },
-});
+);
