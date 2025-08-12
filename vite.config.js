@@ -34,7 +34,7 @@ export default defineConfig({
     assetsInlineLimit: 0,
     rollupOptions: {
       input: {
-        main: resolve(__dirname, "index.html"),
+        main: resolve(__dirname, "src/pages/index.html"),
         about: resolve(__dirname, "src/pages/about.html"),
         services: resolve(__dirname, "src/pages/services.html"),
       },
