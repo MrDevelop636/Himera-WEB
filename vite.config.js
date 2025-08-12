@@ -1,14 +1,12 @@
 import { defineConfig } from "vite";
 import { resolve } from "path";
 import viteImagemin from "vite-plugin-imagemin";
-import mpa from 'vite-plugin-mpa'
 
 export default defineConfig({
   plugins: [
     viteImagemin({
       webp: { quality: 10 },
     }),
-    mpa,
   ],
   optimizeDeps: {
     include: ["gsap", "three", "@splidejs/splide"],
