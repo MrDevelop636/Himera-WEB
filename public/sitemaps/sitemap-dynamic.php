@@ -2,16 +2,13 @@
 header("Content-Type: application/xml; charset=utf-8");
 
 // Adres URL Twojej strony
-$base_url = "https://www.twojastrona.pl";
+$base_url = "https://himera.ct8.pl";
 
 // Lista stron do zamieszczenia w mapie
 $pages = [
     "",
-    "o-nas",
-    "kontakt",
-    "produkty",
-    "blog",
-    "regulamin"
+    "about",
+    "contact"
 ];
 
 // Funkcja do generowania aktualnej daty w formacie YYYY-MM-DD

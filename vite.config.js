@@ -1,7 +1,6 @@
 import { defineConfig } from "vite";
 import { resolve } from "path";
 
-
 export default defineConfig({
   plugins: [],
   optimizeDeps: {
@@ -25,41 +24,41 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: resolve(__dirname, "dist"),   // ważne - folder wyjściowy
+    outDir: resolve(__dirname, "dist"), // ważne - folder wyjściowy
     emptyOutDir: true,
     assetsInlineLimit: 0,
     rollupOptions: {
       input: {
-      index: resolve(__dirname, 'index.html'),
-      about: resolve(__dirname, '/about/index.html'),
-    }
+        index: resolve(__dirname, "index.html"),
+        about: resolve(__dirname, "/about/index.html"),
+        contact: resolve(__dirname, "/contact/index.html"),
       },
-      output: {
-        assetFileNames: (assetInfo) => {
-          // Pobieramy rozszerzenie (ostatnią część po kropce)
-          const extType = assetInfo.name.split(".").pop();
-          if (/png|jpe?g|svg|gif|webp|avif|ico|bmp|tiff/i.test(extType)) {
-            return "assets/images/[name]-[hash][extname]";
-          }
-          if (/css/i.test(extType)) {
-            return "assets/css/[name]-[hash][extname]";
-          }
-          if (/woff2?|eot|ttf|otf/i.test(extType)) {
-            return "assets/fonts/[name]-[hash][extname]";
-          }
-          if (/js/i.test(extType)) {
-            return "assets/js/[name]-[hash][extname]";
-          }
-          return "assets/[name]-[hash][extname]";
-        },
-        chunkFileNames: "assets/js/[name]-[hash].js",
-        entryFileNames: "assets/js/[name]-[hash].js",
-        manualChunks(id) {
-          if (id.includes("node_modules")) {
-            return "vendor";
-          }
-        },
+    },
+    output: {
+      assetFileNames: (assetInfo) => {
+        // Pobieramy rozszerzenie (ostatnią część po kropce)
+        const extType = assetInfo.name.split(".").pop();
+        if (/png|jpe?g|svg|gif|webp|avif|ico|bmp|tiff/i.test(extType)) {
+          return "assets/images/[name]-[hash][extname]";
+        }
+        if (/css/i.test(extType)) {
+          return "assets/css/[name]-[hash][extname]";
+        }
+        if (/woff2?|eot|ttf|otf/i.test(extType)) {
+          return "assets/fonts/[name]-[hash][extname]";
+        }
+        if (/js/i.test(extType)) {
+          return "assets/js/[name]-[hash][extname]";
+        }
+        return "assets/[name]-[hash][extname]";
+      },
+      chunkFileNames: "assets/js/[name]-[hash].js",
+      entryFileNames: "assets/js/[name]-[hash].js",
+      manualChunks(id) {
+        if (id.includes("node_modules")) {
+          return "vendor";
+        }
       },
     },
   },
-);
+});
