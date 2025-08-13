@@ -2,7 +2,7 @@
 header("Content-Type: application/xml; charset=utf-8");
 
 // Adres URL Twojej strony
-$base_url = "https://himera.ct8.pl";
+$base_url = "https://himera.sumrive.eu";
 
 // Lista stron do zamieszczenia w mapie
 $pages = [
