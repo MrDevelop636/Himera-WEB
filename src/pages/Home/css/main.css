@@ -10,6 +10,7 @@
 @import "./components/_cursor.min.css";
 @import "./components/_cards.min.css";
 @import "./components/_bubble.min.css";
+@import "./components/_cookieBanner.min.css";
 
 /* Layout */
 @import "./layout/_about.min.css";

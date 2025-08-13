@@ -1,1087 +1,633 @@
- <!DOCTYPE html>
-  <html lang="pl" data-theme="dark">
-    <head>
-      <!-- Basic Meta Tags -->
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<!DOCTYPE html>
+<html lang="pl" data-theme="dark">
+  <head>
+    <!-- Basic Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-      <!-- Primary Meta Tags -->
-      <title>
-        HIMERA | Premium Electric Vehicles - Luxury Performance Cars
-      </title>
-      <meta
-        name="description"
-        content="HIMERA redefines automotive excellence with cutting-edge electric vehicles. Discover our luxury performance cars with innovative technology and timeless design."
-      />
-      <meta
-        name="keywords"
-        content="HIMERA, electric vehicles, luxury cars, performance cars, eco-friendly cars, premium automobiles"
-      />
-      <meta name="author" content="HIMERA Motors" />
-      <meta name="robots" content="index, follow" />
+    <!-- Primary Meta Tags -->
+    <title>HIMERA | Premium Electric Vehicles - Luxury Performance Cars</title>
+    <meta
+      name="description"
+      content="HIMERA redefines automotive excellence with cutting-edge electric vehicles. Discover our luxury performance cars with innovative technology and timeless design."
+    />
+    <meta
+      name="keywords"
+      content="HIMERA, electric vehicles, luxury cars, performance cars, eco-friendly cars, premium automobiles"
+    />
+    <meta name="author" content="HIMERA Motors" />
+    <meta name="robots" content="index, follow" />
 
-      <!-- Open Graph / Social Media Meta Tags -->
-      <meta
-        property="og:title"
-        content="HIMERA | Premium Electric Vehicles - Luxury Performance Cars"
-      />
-      <meta
-        property="og:description"
-        content="HIMERA redefines automotive excellence with cutting-edge electric vehicles. Discover our luxury performance cars with innovative technology and timeless design."
-      />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://www.himera-motors.com" />
-      <meta
-        property="og:image"
-        content="https://www.himera-motors.com/images/social-preview.jpg"
-      />
-      <meta property="og:site_name" content="HIMERA Motors" />
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta
+      property="og:title"
+      content="HIMERA | Premium Electric Vehicles - Luxury Performance Cars"
+    />
+    <meta
+      property="og:description"
+      content="HIMERA redefines automotive excellence with cutting-edge electric vehicles. Discover our luxury performance cars with innovative technology and timeless design."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.himera-motors.com" />
+    <meta
+      property="og:image"
+      content="https://www.himera-motors.com/images/social-preview.jpg"
+    />
+    <meta property="og:site_name" content="HIMERA Motors" />
 
-      <!-- Twitter Card Meta Tags -->
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta
-        name="twitter:title"
-        content="HIMERA | Premium Electric Vehicles - Luxury Performance Cars"
-      />
-      <meta
-        name="twitter:description"
-        content="HIMERA redefines automotive excellence with cutting-edge electric vehicles. Discover our luxury performance cars with innovative technology and timeless design."
-      />
-      <meta
-        name="twitter:image"
-        content="https://www.himera-motors.com/images/social-preview.jpg"
-      />
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="HIMERA | Premium Electric Vehicles - Luxury Performance Cars"
+    />
+    <meta
+      name="twitter:description"
+      content="HIMERA redefines automotive excellence with cutting-edge electric vehicles. Discover our luxury performance cars with innovative technology and timeless design."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.himera-motors.com/images/social-preview.jpg"
+    />
 
-      <!-- Favicon -->
-      <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-      <link
-        rel="apple-touch-icon"
-        sizes="180x180"
-        href="/apple-touch-icon.png"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href="/favicon-32x32.png"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href="/favicon-16x16.png"
-      />
-      <link rel="manifest" href="/site.webmanifest" />
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 
-      <!-- Canonical URL -->
-      <link rel="canonical" href="https://www.himera-motors.com" />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.himera-motors.com" />
 
-      <!-- Preload Critical Resources -->
+    <!-- Preload Critical Resources -->
 
-      <link rel="preload" href="./src/pages/Home/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="./src/pages/Home/css/main.css"></noscript>
+    <link
+      rel="preload"
+      href="./src/pages/Home/css/main.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link rel="stylesheet" href="./src/pages/Home/css/main.css"
+    /></noscript>
 
-
-
-
-
-
-
-
-      <!-- JSON-LD Structured Data -->
-      <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "HIMERA Motors",
-          "url": "https://www.himera-motors.com",
-          "logo": "https://www.himera-motors.com/images/logo.png",
-          "description": "Manufacturer of premium electric vehicles",
-          "foundingDate": "1987",
-          "founders": [
-            {
-              "@type": "Person",
-              "name": "Founder Name"
-            }
-          ],
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "123 Automotive Way",
-            "addressLocality": "Innovation City",
-            "addressRegion": "CA",
-            "postalCode": "90210",
-            "addressCountry": "USA"
-          },
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "contactType": "customer service",
-            "email": "contact@himera-motors.com",
-            "telephone": "+1-800-HIMERA"
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "HIMERA Motors",
+        "url": "https://www.himera-motors.com",
+        "logo": "https://www.himera-motors.com/images/logo.png",
+        "description": "Manufacturer of premium electric vehicles",
+        "foundingDate": "1987",
+        "founders": [
+          {
+            "@type": "Person",
+            "name": "Founder Name"
           }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "123 Automotive Way",
+          "addressLocality": "Innovation City",
+          "addressRegion": "CA",
+          "postalCode": "90210",
+          "addressCountry": "USA"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "email": "contact@himera-motors.com",
+          "telephone": "+1-800-HIMERA"
         }
-      </script>
+      }
+    </script>
 
-      <!-- Main JS -->
-      <script type="module" src="/src/pages/Home/App.js"></script>
-    </head>
-    <body>
-      <!-- Pasek postępu przewijania -->
-<div id="scroll-progress"></div>
+    <!-- Main JS -->
+    <script type="module" src="/src/pages/Home/App.js"></script>
+  </head>
+  <body>
+    <!-- Pasek postępu przewijania -->
+    <div id="scroll-progress"></div>
 
-      <!-- Loading Screen -->
- <!--   <div class="loading">
+    <!-- Loading Screen -->
+    <!--   <div class="loading">
         <div class="loading__logo">HIMERA</div>
         <div class="loading__progress">
           <div class="loading__progress-bar"></div>
         </div>
-      </div> -->   
+      </div> -->
 
-      <!-- Custom Cursor -->
-      <div class="cursor"></div>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
 
-      <!-- Navbar -->
-      <nav class="navbar">
-        <div class="container navbar__container">
-          <a href="#" class="navbar__logo">HIMERA</a>
-          <div class="navbar__menu">
-            <a href="#about" class="navbar__link">About</a>
-            <a href="#models" class="navbar__link">Models</a>
-            <a href="#technology" class="navbar__link">Technology</a>
-            <a href="#contact" class="navbar__link">Contact</a>
-          </div>
-          <button class="navbar__theme-toggle" aria-label="Toggle theme">
-            <span class="material-icons theme-icon">brightness_4</span>
-          </button>
-          <button class="navbar__burger" aria-label="Menu">
-            <span class="material-icons">menu</span>
-          </button>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container navbar__container">
+        <a href="#" class="navbar__logo">HIMERA</a>
+        <div class="navbar__menu">
+          <a href="#about" class="navbar__link">About</a>
+          <a href="#models" class="navbar__link">Models</a>
+          <a href="#technology" class="navbar__link">Technology</a>
+          <a href="#contact" class="navbar__link">Contact</a>
         </div>
-        <div class="navbar__mobile-menu">
-          <ul class="navbar__mobile-links">
-            <li><a href="#about" class="navbar__mobile-link">About</a></li>
-            <li><a href="#models" class="navbar__mobile-link">Models</a></li>
-            <li>
-              <a href="#technology" class="navbar__mobile-link">Technology</a>
-            </li>
-            <li><a href="#contact" class="navbar__mobile-link">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
+        <button class="navbar__theme-toggle" aria-label="Toggle theme">
+          <span class="material-icons theme-icon">brightness_4</span>
+        </button>
+        <button class="navbar__burger" aria-label="Menu">
+          <span class="material-icons">menu</span>
+        </button>
+      </div>
+      <div class="navbar__mobile-menu">
+        <ul class="navbar__mobile-links">
+          <li><a href="#about" class="navbar__mobile-link">About</a></li>
+          <li><a href="#models" class="navbar__mobile-link">Models</a></li>
+          <li>
+            <a href="#technology" class="navbar__mobile-link">Technology</a>
+          </li>
+          <li><a href="#contact" class="navbar__mobile-link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
 
-      <!-- Hero Section -->
-      <section class="hero">
-        <div class="hero__content">
-          <h1 class="hero__title text-gradient">Redefining <br />Automotive</h1>
-          <p class="hero__subtitle">
-            HIMERA combines cutting-edge technology with timeless design to
-            create vehicles that transcend expectations.
-          </p>
-          <a href="#models" class="btn btn--primary hero__cta"
-            >Explore Models</a
-          >
-        </div>
-        <div class="hero__scroll-hint">
-          <span class="hero__scroll-hint-text text-uppercase">Scroll Down</span>
-          <div class="hero__scroll-hint-icon"></div>
-        </div>
-      </section>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero__content">
+        <h1 class="hero__title text-gradient">Redefining <br />Automotive</h1>
+        <p class="hero__subtitle">
+          HIMERA combines cutting-edge technology with timeless design to create
+          vehicles that transcend expectations.
+        </p>
+        <a href="#models" class="btn btn--primary hero__cta">Explore Models</a>
+      </div>
+      <div class="hero__scroll-hint">
+        <span class="hero__scroll-hint-text text-uppercase">Scroll Down</span>
+        <div class="hero__scroll-hint-icon"></div>
+      </div>
+    </section>
 
-      <!-- About Section -->
-      <section class="section about" id="about">
-        <div class="container">
-          <div class="about__grid">
-            <div class="about__content">
-              <h2 class="about__title">
-                Engineering <span class="text-gradient">Excellence</span>
-              </h2>
-              <p class="about__text">
-                Founded in 1987, HIMERA has consistently pushed the boundaries
-                of automotive innovation. Our team of visionary engineers and
-                designers work tirelessly to create vehicles that deliver
-                unparalleled performance and sophistication.
-              </p>
-              <p class="about__text">
-                Every HIMERA vehicle is a masterpiece of precision engineering,
-                crafted with the finest materials and subjected to rigorous
-                testing to ensure perfection.
-              </p>
-              <div class="about__stats">
-                <div class="about__stat">
-<div class="about__stat-value" data-target="35">0</div>
- <div class="about__stat-label">Years of Experience</div>
-
-
-
-
-
-
-
-                </div>
-                <div class="about__stat">
-<div class="about__stat-value" data-target="500">0</div>
-<div class="about__stat-label">Patents</div>
-                </div>
-                <div class="about__stat">
-<div class="about__stat-value" data-target="1000000">0</div>
-<div class="about__stat-label">Vehicles Produced</div>
-                </div>
-                <div class="about__stat">
-<div class="about__stat-value" data-target="24">0</div>
-<div class="about__stat-label">Countries</div>
-                </div>
-              </div>
-            </div>
-            <div class="about__media">
-              <img
-                src="/src/pages/Home/images/photo-1494972308805-463bc619d34e.avif"
-                alt="HIMERA Factory"
-                class="about__image"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Models Section -->
-      <section class="section models" id="models">
-        <div class="container">
-          <div class="section__header models__header">
-            <h2>Our <span class="text-gradient">Models</span></h2>
-            <a href="#" class="text-uppercase">View All</a>
-          </div>
-          <div class="models__slider splide">
-            <div class="splide__track">
-              <div class="splide__list">
-                <div class="splide__slide">
-                  <div class="model-card">
-                    <img
-                      src="/src/pages/Home/images/photo-1494905998402-395d579af36f.avif"
-                      alt="HIMERA GT"
-                      class="model-card__image"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                    <h3 class="model-card__name">GT</h3>
-                    <div class="model-card__price">From $120,000</div>
-                    <div class="model-card__features">
-                      <div class="model-card__feature">
-                        <span class="material-icons model-card__feature-icon"
-                          >bolt</span
-                        >
-                        <span>620 HP</span>
-                      </div>
-                      <div class="model-card__feature">
-                        <span class="material-icons model-card__feature-icon"
-                          >speed</span
-                        >
-                        <span>3.2s 0-100</span>
-                      </div>
-                      <div class="model-card__feature">
-                        <span class="material-icons model-card__feature-icon"
-                          >map</span
-                        >
-                        <span>480km Range</span>
-                      </div>
-                    </div>
-                    <a href="#" class="btn btn--primary model-card__cta"
-                      >Configure</a
-                    >
-                  </div>
-                </div>
-                <div class="splide__slide">
-                  <div class="model-card">
-                    <img
-                      src="/src/pages/Home/images/photo-1503376780353-7e6692767b70.avif"
-                      alt="HIMERA S"
-                      class="model-card__image"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                    <h3 class="model-card__name">S</h3>
-                    <div class="model-card__price">From $95,000</div>
-                    <div class="model-card__features">
-                      <div class="model-card__feature">
-                        <span class="material-icons model-card__feature-icon"
-                          >bolt</span
-                        >
-                        <span>480 HP</span>
-                      </div>
-                      <div class="model-card__feature">
-                        <span class="material-icons model-card__feature-icon"
-                          >speed</span
-                        >
-                        <span>4.1s 0-100</span>
-                      </div>
-                      <div class="model-card__feature">
-                        <span class="material-icons model-card__feature-icon"
-                          >map</span
-                        >
-                        <span>520km Range</span>
-                      </div>
-                    </div>
-                    <a href="#" class="btn btn--primary model-card__cta"
-                      >Configure</a
-                    >
-                  </div>
-                </div>
-                <div class="splide__slide">
-                  <div class="model-card">
-                    <img
-                      src="./src/images/photo-1503376780353-7e6692767b70.avif"
-                      alt="HIMERA X"
-                      class="model-card__image"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                    <h3 class="model-card__name">X</h3>
-                    <div class="model-card__price">From $150,000</div>
-                    <div class="model-card__features">
-                      <div class="model-card__feature">
-                        <span class="material-icons model-card__feature-icon"
-                          >bolt</span
-                        >
-                        <span>700 HP</span>
-                      </div>
-                      <div class="model-card__feature">
-                        <span class="material-icons model-card__feature-icon"
-                          >speed</span
-                        >
-                        <span>2.9s 0-100</span>
-                      </div>
-                      <div class="model-card__feature">
-                        <span class="material-icons model-card__feature-icon"
-                          >map</span
-                        >
-                        <span>450km Range</span>
-                      </div>
-                    </div>
-                    <a href="#" class="btn btn--primary model-card__cta"
-                      >Configure</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Technology Section -->
-      <section class="section technology" id="technology">
-        <div class="container">
-          <div class="section__header">
-            <h2>Innovative <span class="text-gradient">Technology</span></h2>
-          </div>
-          <div class="technology__grid">
-            <div class="tech-card">
-              <div class="material-icons tech-card__icon">bolt</div>
-              <h3 class="tech-card__title">HyperDrive System</h3>
-              <p class="tech-card__description">
-                Our proprietary all-electric powertrain delivers instant torque
-                and unprecedented efficiency without compromising performance.
-              </p>
-            </div>
-            <div class="tech-card">
-              <div class="material-icons tech-card__icon">memory</div>
-              <h3 class="tech-card__title">Neural AI</h3>
-              <p class="tech-card__description">
-                Advanced artificial intelligence learns your driving habits to
-                optimize performance, comfort, and safety in real-time.
-              </p>
-            </div>
-            <div class="tech-card">
-              <div class="material-icons tech-card__icon">recycling</div>
-              <h3 class="tech-card__title">EcoFrame</h3>
-              <p class="tech-card__description">
-                Sustainable materials and manufacturing processes reduce
-                environmental impact without sacrificing structural integrity.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact Section -->
-      <section class="section contact" id="contact">
-        <div class="container">
-          <div class="section__header">
-            <h2>Begin Your <span class="text-gradient">Journey</span></h2>
-          </div>
-          <div class="contact__content">
-            <form class="contact__form">
-              <div class="form-group">
-                <input type="text" id="name" placeholder=" " required />
-                <label for="name">Full Name</label>
-              </div>
-              <div class="form-group">
-                <input type="email" id="email" placeholder=" " required />
-                <label for="email">Email Address</label>
-              </div>
-              <div class="form-group">
-                <select id="interest" required>
-                  <option value="" disabled selected></option>
-                  <option value="test-drive">Schedule Test Drive</option>
-                  <option value="purchase">Purchase Inquiry</option>
-                  <option value="general">General Information</option>
-                </select>
-                <label for="interest">I'm interested in</label>
-              </div>
-              <div class="form-group">
-                <textarea
-                  id="message"
-                  rows="4"
-                  placeholder=" "
-                  required
-                ></textarea>
-                <label for="message">Your Message</label>
-              </div>
-              <button type="submit" class="btn btn--primary">Submit</button>
-            </form>
-          </div>
-        </div>
-      </section>
-
-      <!-- Footer -->
-      <footer class="footer">
-        <div class="container">
-          <div class="footer__grid">
-            <div class="footer__col">
-              <a href="#" class="footer__logo">HIMERA</a>
-              <p class="footer__description">
-                Redefining automotive excellence through innovation, design, and
-                performance.
-              </p>
-            </div>
-            <div class="footer__col">
-              <h4 class="footer__title">Models</h4>
-              <ul class="footer__links">
-                <li class="footer__link-item">
-                  <a href="#" class="footer__link">GT</a>
-                </li>
-                <li class="footer__link-item">
-                  <a href="#" class="footer__link">S</a>
-                </li>
-                <li class="footer__link-item">
-                  <a href="#" class="footer__link">X</a>
-                </li>
-                <li class="footer__link-item">
-                  <a href="#" class="footer__link">Upcoming</a>
-                </li>
-              </ul>
-            </div>
-            <div class="footer__col">
-              <h4 class="footer__title">Company</h4>
-              <ul class="footer__links">
-                <li class="footer__link-item">
-                  <a href="#" class="footer__link">About</a>
-                </li>
-                <li class="footer__link-item">
-                  <a href="#" class="footer__link">Careers</a>
-                </li>
-                <li class="footer__link-item">
-                  <a href="#" class="footer__link">News</a>
-                </li>
-                <li class="footer__link-item">
-                  <a href="#" class="footer__link">Sustainability</a>
-                </li>
-              </ul>
-            </div>
-            <div class="footer__col">
-              <h4 class="footer__title">Contact</h4>
-              <ul class="footer__links">
-                <li class="footer__link-item">
-                  <a href="#" class="footer__link">Find a Dealer</a>
-                </li>
-                <li class="footer__link-item">
-                  <a href="#" class="footer__link">Test Drive</a>
-                </li>
-                <li class="footer__link-item">
-                  <a href="#" class="footer__link">Customer Support</a>
-                </li>
-                <li class="footer__link-item">
-                  <a href="#" class="footer__link">Press Inquiries</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="footer__bottom">
-            <p class="footer__copyright">
-              © 2023 HIMERA Motors. All rights reserved.
+    <!-- About Section -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="about__grid">
+          <div class="about__content">
+            <h2 class="about__title">
+              Engineering <span class="text-gradient">Excellence</span>
+            </h2>
+            <p class="about__text">
+              Founded in 1987, HIMERA has consistently pushed the boundaries of
+              automotive innovation. Our team of visionary engineers and
+              designers work tirelessly to create vehicles that deliver
+              unparalleled performance and sophistication.
             </p>
-            <div class="footer__legal-links">
-              <a href="#" class="footer__link">Privacy Policy</a>
-              <a href="#" class="footer__link">Terms of Service</a>
-              <a href="#" class="footer__link">Cookies</a>
+            <p class="about__text">
+              Every HIMERA vehicle is a masterpiece of precision engineering,
+              crafted with the finest materials and subjected to rigorous
+              testing to ensure perfection.
+            </p>
+            <div class="about__stats">
+              <div class="about__stat">
+                <div class="about__stat-value" data-target="35">0</div>
+                <div class="about__stat-label">Years of Experience</div>
+              </div>
+              <div class="about__stat">
+                <div class="about__stat-value" data-target="500">0</div>
+                <div class="about__stat-label">Patents</div>
+              </div>
+              <div class="about__stat">
+                <div class="about__stat-value" data-target="1000000">0</div>
+                <div class="about__stat-label">Vehicles Produced</div>
+              </div>
+              <div class="about__stat">
+                <div class="about__stat-value" data-target="24">0</div>
+                <div class="about__stat-label">Countries</div>
+              </div>
+            </div>
+          </div>
+          <div class="about__media">
+            <img
+              src="/src/pages/Home/images/photo-1494972308805-463bc619d34e.avif"
+              alt="HIMERA Factory"
+              class="about__image"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Models Section -->
+    <section class="section models" id="models">
+      <div class="container">
+        <div class="section__header models__header">
+          <h2>Our <span class="text-gradient">Models</span></h2>
+          <a href="#" class="text-uppercase">View All</a>
+        </div>
+        <div class="models__slider splide">
+          <div class="splide__track">
+            <div class="splide__list">
+              <div class="splide__slide">
+                <div class="model-card">
+                  <img
+                    src="/src/pages/Home/images/photo-1494905998402-395d579af36f.avif"
+                    alt="HIMERA GT"
+                    class="model-card__image"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <h3 class="model-card__name">GT</h3>
+                  <div class="model-card__price">From $120,000</div>
+                  <div class="model-card__features">
+                    <div class="model-card__feature">
+                      <span class="material-icons model-card__feature-icon"
+                        >bolt</span
+                      >
+                      <span>620 HP</span>
+                    </div>
+                    <div class="model-card__feature">
+                      <span class="material-icons model-card__feature-icon"
+                        >speed</span
+                      >
+                      <span>3.2s 0-100</span>
+                    </div>
+                    <div class="model-card__feature">
+                      <span class="material-icons model-card__feature-icon"
+                        >map</span
+                      >
+                      <span>480km Range</span>
+                    </div>
+                  </div>
+                  <a href="#" class="btn btn--primary model-card__cta"
+                    >Configure</a
+                  >
+                </div>
+              </div>
+              <div class="splide__slide">
+                <div class="model-card">
+                  <img
+                    src="/src/pages/Home/images/photo-1503376780353-7e6692767b70.avif"
+                    alt="HIMERA S"
+                    class="model-card__image"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <h3 class="model-card__name">S</h3>
+                  <div class="model-card__price">From $95,000</div>
+                  <div class="model-card__features">
+                    <div class="model-card__feature">
+                      <span class="material-icons model-card__feature-icon"
+                        >bolt</span
+                      >
+                      <span>480 HP</span>
+                    </div>
+                    <div class="model-card__feature">
+                      <span class="material-icons model-card__feature-icon"
+                        >speed</span
+                      >
+                      <span>4.1s 0-100</span>
+                    </div>
+                    <div class="model-card__feature">
+                      <span class="material-icons model-card__feature-icon"
+                        >map</span
+                      >
+                      <span>520km Range</span>
+                    </div>
+                  </div>
+                  <a href="#" class="btn btn--primary model-card__cta"
+                    >Configure</a
+                  >
+                </div>
+              </div>
+              <div class="splide__slide">
+                <div class="model-card">
+                  <img
+                    src="./src/images/photo-1503376780353-7e6692767b70.avif"
+                    alt="HIMERA X"
+                    class="model-card__image"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <h3 class="model-card__name">X</h3>
+                  <div class="model-card__price">From $150,000</div>
+                  <div class="model-card__features">
+                    <div class="model-card__feature">
+                      <span class="material-icons model-card__feature-icon"
+                        >bolt</span
+                      >
+                      <span>700 HP</span>
+                    </div>
+                    <div class="model-card__feature">
+                      <span class="material-icons model-card__feature-icon"
+                        >speed</span
+                      >
+                      <span>2.9s 0-100</span>
+                    </div>
+                    <div class="model-card__feature">
+                      <span class="material-icons model-card__feature-icon"
+                        >map</span
+                      >
+                      <span>450km Range</span>
+                    </div>
+                  </div>
+                  <a href="#" class="btn btn--primary model-card__cta"
+                    >Configure</a
+                  >
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </footer>
+      </div>
+    </section>
 
-<script>
-document.querySelector('.contact__form').addEventListener('submit', async function (e) {
-    e.preventDefault();
+    <!-- Technology Section -->
+    <section class="section technology" id="technology">
+      <div class="container">
+        <div class="section__header">
+          <h2>Innovative <span class="text-gradient">Technology</span></h2>
+        </div>
+        <div class="technology__grid">
+          <div class="tech-card">
+            <div class="material-icons tech-card__icon">bolt</div>
+            <h3 class="tech-card__title">HyperDrive System</h3>
+            <p class="tech-card__description">
+              Our proprietary all-electric powertrain delivers instant torque
+              and unprecedented efficiency without compromising performance.
+            </p>
+          </div>
+          <div class="tech-card">
+            <div class="material-icons tech-card__icon">memory</div>
+            <h3 class="tech-card__title">Neural AI</h3>
+            <p class="tech-card__description">
+              Advanced artificial intelligence learns your driving habits to
+              optimize performance, comfort, and safety in real-time.
+            </p>
+          </div>
+          <div class="tech-card">
+            <div class="material-icons tech-card__icon">recycling</div>
+            <h3 class="tech-card__title">EcoFrame</h3>
+            <p class="tech-card__description">
+              Sustainable materials and manufacturing processes reduce
+              environmental impact without sacrificing structural integrity.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    const name = document.querySelector('#name').value.trim();
-    const email = document.querySelector('#email').value.trim();
-    const interest = document.querySelector('#interest').value.trim();
-    const message = document.querySelector('#message').value.trim();
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section__header">
+          <h2>Begin Your <span class="text-gradient">Journey</span></h2>
+        </div>
+        <div class="contact__content">
+          <form class="contact__form">
+            <div class="form-group">
+              <input type="text" id="name" placeholder=" " required />
+              <label for="name">Full Name</label>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" placeholder=" " required />
+              <label for="email">Email Address</label>
+            </div>
+            <div class="form-group">
+              <select id="interest" required>
+                <option value="" disabled selected></option>
+                <option value="test-drive">Schedule Test Drive</option>
+                <option value="purchase">Purchase Inquiry</option>
+                <option value="general">General Information</option>
+              </select>
+              <label for="interest">I'm interested in</label>
+            </div>
+            <div class="form-group">
+              <textarea
+                id="message"
+                rows="4"
+                placeholder=" "
+                required
+              ></textarea>
+              <label for="message">Your Message</label>
+            </div>
+            <button type="submit" class="btn btn--primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
 
-    // Składamy temat i treść wiadomości
-    const subject = `Formularz kontaktowy - ${interest || 'Zapytanie'}`;
-    const bodyMessage = `Imię i nazwisko: ${name}\nEmail: ${email}\nTemat: ${interest}\n\nWiadomość:\n${message}`;
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__col">
+            <a href="#" class="footer__logo">HIMERA</a>
+            <p class="footer__description">
+              Redefining automotive excellence through innovation, design, and
+              performance.
+            </p>
+          </div>
+          <div class="footer__col">
+            <h4 class="footer__title">Models</h4>
+            <ul class="footer__links">
+              <li class="footer__link-item">
+                <a href="#" class="footer__link">GT</a>
+              </li>
+              <li class="footer__link-item">
+                <a href="#" class="footer__link">S</a>
+              </li>
+              <li class="footer__link-item">
+                <a href="#" class="footer__link">X</a>
+              </li>
+              <li class="footer__link-item">
+                <a href="#" class="footer__link">Upcoming</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4 class="footer__title">Company</h4>
+            <ul class="footer__links">
+              <li class="footer__link-item">
+                <a href="#" class="footer__link">About</a>
+              </li>
+              <li class="footer__link-item">
+                <a href="#" class="footer__link">Careers</a>
+              </li>
+              <li class="footer__link-item">
+                <a href="#" class="footer__link">News</a>
+              </li>
+              <li class="footer__link-item">
+                <a href="#" class="footer__link">Sustainability</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4 class="footer__title">Contact</h4>
+            <ul class="footer__links">
+              <li class="footer__link-item">
+                <a href="#" class="footer__link">Find a Dealer</a>
+              </li>
+              <li class="footer__link-item">
+                <a href="#" class="footer__link">Test Drive</a>
+              </li>
+              <li class="footer__link-item">
+                <a href="#" class="footer__link">Customer Support</a>
+              </li>
+              <li class="footer__link-item">
+                <a href="#" class="footer__link">Press Inquiries</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p class="footer__copyright">
+            © 2023 HIMERA Motors. All rights reserved.
+          </p>
+          <div class="footer__legal-links">
+            <a href="#" class="footer__link">Privacy Policy</a>
+            <a href="#" class="footer__link">Terms of Service</a>
+            <a href="#" class="footer__link">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-    try {
-        const response = await fetch('/api/email.php', { // <-- Ścieżka do Twojego skryptu PHP
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                email: 'matix2025xx@gmail.com', // adres odbiorcy zdefiniowany w PHP
-                subject: subject,
-                message: bodyMessage
-            })
-        });
-
-        const result = await response.json();
-
-        if (response.ok) {
-            alert('Wiadomość została wysłana pomyślnie.');
-            e.target.reset();
-        } else {
-            alert(`Błąd: ${result.error || 'Nie udało się wysłać wiadomości.'}`);
-        }
-    } catch (error) {
-        alert('Wystąpił problem z połączeniem z serwerem.');
-        console.error(error);
-    }
-});
-</script>
-<script>
-  window.addEventListener('scroll', () => {
-    const scrollTop = window.scrollY;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const scrollPercent = (scrollTop / docHeight) * 100;
-    document.getElementById('scroll-progress').style.width = scrollPercent + '%';
-  });
-</script>
-<script>
-function animateCounter(counter) {
-  const target = +counter.getAttribute('data-target');
-  const duration = 1500; // czas animacji w ms
-  const startTime = performance.now();
-
-  counter.classList.add('active');
-
-  function update(currentTime) {
-    const elapsed = currentTime - startTime;
-    const progress = Math.min(elapsed / duration, 1);
-    counter.textContent = Math.floor(progress * target).toLocaleString();
-
-    if (progress < 1) {
-      requestAnimationFrame(update);
-    } else {
-      counter.textContent = target.toLocaleString();
-      counter.classList.remove('active');
-    }
-  }
-  requestAnimationFrame(update);
-}
-
-// Obserwator – uruchamia animację, gdy sekcja jest widoczna
-const observer = new IntersectionObserver((entries, obs) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      animateCounter(entry.target);
-      obs.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.8 });
-
-// Podpinamy do wszystkich liczników
-document.querySelectorAll('.about__stat-value').forEach(counter => {
-  observer.observe(counter);
-});
-</script>
-
-<div class="social-bubbles">
-  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-bubble" aria-label="Instagram">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-      <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
-    </svg>
-  </a>
-  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-bubble" aria-label="Facebook">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-      <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/>
-    </svg>
-  </a>
-  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-bubble" aria-label="LinkedIn">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-      <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/>
-    </svg>
-  </a>
-</div>
-<!-- Dodaj to przed zamknięciem </body> -->
-<div class="cookies-banner" id="cookiesBanner">
-  <div class="cookies-banner__content">
-    <div class="cookies-banner__text">
-      <span class="material-icons cookies-banner__icon">cookie</span>
-      <p>We use cookies to enhance your experience on our website. By continuing to browse, you agree to our use of cookies.</p>
+    <div class="social-bubbles">
+      <a
+        href="https://instagram.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-bubble"
+        aria-label="Instagram"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <path
+            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+          />
+        </svg>
+      </a>
+      <a
+        href="https://facebook.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-bubble"
+        aria-label="Facebook"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+          <path
+            d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+          />
+        </svg>
+      </a>
+      <a
+        href="https://linkedin.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-bubble"
+        aria-label="LinkedIn"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <path
+            d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+          />
+        </svg>
+      </a>
     </div>
-    <div class="cookies-banner__actions">
-      <button class="btn btn--outline cookies-banner__btn" id="configureCookies">Configure</button>
-      <button class="btn btn--primary cookies-banner__btn" id="acceptCookies">Accept All</button>
+    <!-- Dodaj to przed zamknięciem </body> -->
+    <div class="cookies-banner" id="cookiesBanner">
+      <div class="cookies-banner__content">
+        <div class="cookies-banner__text">
+          <span class="material-icons cookies-banner__icon">cookie</span>
+          <p>
+            We use cookies to enhance your experience on our website. By
+            continuing to browse, you agree to our use of cookies.
+          </p>
+        </div>
+        <div class="cookies-banner__actions">
+          <button
+            class="btn btn--outline cookies-banner__btn"
+            id="configureCookies"
+          >
+            Configure
+          </button>
+          <button
+            class="btn btn--primary cookies-banner__btn"
+            id="acceptCookies"
+          >
+            Accept All
+          </button>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-<div class="cookies-config-icon" id="cookiesConfigIcon" style="display: none;">
-  <button class="cookies-config-icon__btn" aria-label="Cookie settings">
-    <span class="material-icons cookies-icon">settings</span>
-  </button>
-</div>
-
-<div class="cookies-modal" id="cookiesModal">
-  <div class="cookies-modal__content">
-    <div class="cookies-modal__header">
-      <h3 class="cookies-modal__title">Cookie Preferences</h3>
-      <button class="cookies-modal__close" id="closeCookiesModal">
-        <span class="material-icons">close</span>
+    <div
+      class="cookies-config-icon"
+      id="cookiesConfigIcon"
+      style="display: none"
+    >
+      <button class="cookies-config-icon__btn" aria-label="Cookie settings">
+        <span class="material-icons cookies-icon">settings</span>
       </button>
     </div>
-    <div class="cookies-modal__body">
-      <div class="cookies-category">
-        <div class="cookies-category__header">
-          <label class="cookies-category__toggle">
-            <input type="checkbox" checked disabled>
-            <span class="cookies-category__slider"></span>
-          </label>
-          <h4 class="cookies-category__title">Essential Cookies</h4>
+
+    <div class="cookies-modal" id="cookiesModal">
+      <div class="cookies-modal__content">
+        <div class="cookies-modal__header">
+          <h3 class="cookies-modal__title">Cookie Preferences</h3>
+          <button class="cookies-modal__close" id="closeCookiesModal">
+            <span class="material-icons">close</span>
+          </button>
         </div>
-        <p class="cookies-category__description">These cookies are necessary for the website to function and cannot be switched off.</p>
-      </div>
-      
-      <div class="cookies-category">
-        <div class="cookies-category__header">
-          <label class="cookies-category__toggle">
-            <input type="checkbox" id="analyticsCookies" checked>
-            <span class="cookies-category__slider"></span>
-          </label>
-          <h4 class="cookies-category__title">Analytics Cookies</h4>
+        <div class="cookies-modal__body">
+          <div class="cookies-category">
+            <div class="cookies-category__header">
+              <label class="cookies-category__toggle">
+                <input type="checkbox" checked disabled />
+                <span class="cookies-category__slider"></span>
+              </label>
+              <h4 class="cookies-category__title">Essential Cookies</h4>
+            </div>
+            <p class="cookies-category__description">
+              These cookies are necessary for the website to function and cannot
+              be switched off.
+            </p>
+          </div>
+
+          <div class="cookies-category">
+            <div class="cookies-category__header">
+              <label class="cookies-category__toggle">
+                <input type="checkbox" id="analyticsCookies" checked />
+                <span class="cookies-category__slider"></span>
+              </label>
+              <h4 class="cookies-category__title">Analytics Cookies</h4>
+            </div>
+            <p class="cookies-category__description">
+              Allow us to analyze website usage to improve performance.
+            </p>
+          </div>
+
+          <div class="cookies-category">
+            <div class="cookies-category__header">
+              <label class="cookies-category__toggle">
+                <input type="checkbox" id="marketingCookies" checked />
+                <span class="cookies-category__slider"></span>
+              </label>
+              <h4 class="cookies-category__title">Marketing Cookies</h4>
+            </div>
+            <p class="cookies-category__description">
+              Used to track visitors across websites for targeted advertising.
+            </p>
+          </div>
         </div>
-        <p class="cookies-category__description">Allow us to analyze website usage to improve performance.</p>
-      </div>
-      
-      <div class="cookies-category">
-        <div class="cookies-category__header">
-          <label class="cookies-category__toggle">
-            <input type="checkbox" id="marketingCookies" checked>
-            <span class="cookies-category__slider"></span>
-          </label>
-          <h4 class="cookies-category__title">Marketing Cookies</h4>
+        <div class="cookies-modal__footer">
+          <button class="btn btn--primary" id="saveCookiePreferences">
+            Save Preferences
+          </button>
         </div>
-        <p class="cookies-category__description">Used to track visitors across websites for targeted advertising.</p>
       </div>
     </div>
-    <div class="cookies-modal__footer">
-      <button class="btn btn--primary" id="saveCookiePreferences">Save Preferences</button>
-    </div>
-  </div>
-</div>
-
-<style>
-  /* --- Jasny motyw przełączników cookies --- */
-[data-theme="light"] .cookies-category__toggle {
-  position: relative;
-  display: inline-block;
-  width: 48px;
-  height: 24px;
-}
-
-[data-theme="light"] .cookies-category__toggle input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-[data-theme="light"] .cookies-category__slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-color: #e0e0e0; /* jasne tło w trybie light */
-  transition: 0.4s;
-  border-radius: 24px;
-  box-shadow: inset 0 0 4px rgba(0,0,0,0.2);
-}
-
-[data-theme="light"] .cookies-category__slider:before {
-  position: absolute;
-  content: "";
-  height: 18px;
-  width: 18px;
-  left: 3px;
-  bottom: 3px;
-  background-color: #fff;
-  border-radius: 50%;
-  transition: 0.4s;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
-}
-
-/* Włączony */
-[data-theme="light"] .cookies-category__toggle input:checked + .cookies-category__slider {
-  background-color: var(--accent-color, #4cafef);
-}
-
-[data-theme="light"] .cookies-category__toggle input:checked + .cookies-category__slider:before {
-  transform: translateX(24px);
-}
-
-/* Teksty w jasnym motywie */
-[data-theme="light"] .cookies-category__title {
-  color: #222;
-}
-
-[data-theme="light"] .cookies-category__description {
-  color: #555;
-}
-
-  /* Cookies Banner Styles - Działa dla obu motywów */
-  .cookies-banner {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: var(--cookies-banner-bg, rgba(20, 20, 30, 0.95));
-    color: var(--cookies-banner-text, #fff);
-    padding: 1rem;
-    z-index: 1000;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px);
-    transform: translateY(100%);
-    transition: transform 0.3s ease-out;
-    border-top: 1px solid var(--cookies-banner-border, rgba(255, 255, 255, 0.1));
-  }
-  
-  [data-theme="light"] .cookies-banner {
-    --cookies-banner-bg: rgba(255, 255, 255, 0.95);
-    --cookies-banner-text: #333;
-    --cookies-banner-border: rgba(0, 0, 0, 0.1);
-    --cookies-banner-icon: var(--accent-color);
-  }
-  
-  .cookies-banner.active {
-    transform: translateY(0);
-  }
-  
-  .cookies-banner__content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-  }
-  
-  .cookies-banner__text {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    flex: 1;
-    min-width: 300px;
-  }
-  
-  .cookies-banner__icon {
-    color: var(--cookies-banner-icon, var(--accent-color));
-    font-size: 1.5rem;
-  }
-  
-  .cookies-banner__actions {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .cookies-banner__btn {
-    padding: 0.5rem 1.5rem;
-    border-radius: 4px;
-    font-weight: 500;
-  }
-  
-  /* Config Icon */
-  .cookies-config-icon {
-    position: fixed;
-    left: 20px;
-    bottom: 20px;
-    z-index: 1001;
-  }
-  
-  .cookies-config-icon__btn {
-    background: var(--accent-color);
-    color: #fff;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s;
-  }
-  
-  .cookies-config-icon__btn:hover {
-    transform: scale(1.1);
-  }
-  
-  /* Cookies Modal */
-  .cookies-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 1002;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s;
-  }
-  
-  .cookies-modal.active {
-    opacity: 1;
-    pointer-events: all;
-  }
-  
-  .cookies-modal__content {
-    background: var(--cookies-modal-bg, #1a1a2e);
-    color: var(--cookies-modal-text, #fff);
-    max-width: 600px;
-    width: 90%;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-    transform: translateY(20px);
-    transition: transform 0.3s;
-  }
-  
-  [data-theme="light"] .cookies-modal__content {
-    --cookies-modal-bg: #ffffff;
-    --cookies-modal-text: #333;
-    --cookies-modal-border: rgba(0, 0, 0, 0.1);
-    --cookies-modal-description: #666;
-    --cookies-toggle-bg: rgba(0, 0, 0, 0.1);
-    --cookies-toggle-disabled: rgba(0, 0, 0, 0.05);
-    --cookies-toggle-thumb: #fff;
-  }
-  
-  .cookies-modal.active .cookies-modal__content {
-    transform: translateY(0);
-  }
-  
-  .cookies-modal__header {
-    padding: 1.5rem;
-    border-bottom: 1px solid var(--cookies-modal-border, rgba(255, 255, 255, 0.1));
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .cookies-modal__title {
-    margin: 0;
-    font-size: 1.5rem;
-  }
-  
-  .cookies-modal__close {
-    background: none;
-    border: none;
-    color: var(--cookies-modal-text, #fff);
-    cursor: pointer;
-    font-size: 1.5rem;
-    opacity: 0.7;
-    transition: opacity 0.2s;
-  }
-  
-  .cookies-modal__close:hover {
-    opacity: 1;
-  }
-  
-  .cookies-modal__body {
-    padding: 1.5rem;
-  }
-  
-  .cookies-category {
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid var(--cookies-modal-border, rgba(255, 255, 255, 0.05));
-  }
-  
-  .cookies-category:last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border-bottom: none;
-  }
-  
-  .cookies-category__header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0.5rem;
-  }
-  
-  .cookies-category__title {
-    margin: 0 0 0 1rem;
-    font-size: 1.1rem;
-  }
-  
-  .cookies-category__description {
-    margin: 0;
-    color: var(--cookies-modal-description, rgba(255, 255, 255, 0.7));
-    font-size: 0.9rem;
-    line-height: 1.5;
-  }
-  
-  .cookies-category__toggle {
-    position: relative;
-    display: inline-block;
-    width: 50px;
-    height: 24px;
-  }
-  
-  .cookies-category__toggle input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  .cookies-category__slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--cookies-toggle-bg, rgba(255, 255, 255, 0.1));
-    transition: .4s;
-    border-radius: 24px;
-  }
-  
-  .cookies-category__slider:before {
-    position: absolute;
-    content: "";
-    height: 16px;
-    width: 16px;
-    left: 4px;
-    bottom: 4px;
-    background-color: var(--cookies-toggle-thumb, white);
-    transition: .4s;
-    border-radius: 50%;
-  }
-  
-  input:checked + .cookies-category__slider {
-    background-color: var(--accent-color);
-  }
-  
-  input:checked + .cookies-category__slider:before {
-    transform: translateX(26px);
-  }
-  
-  input:disabled + .cookies-category__slider {
-    background-color: var(--cookies-toggle-disabled, rgba(255, 255, 255, 0.05));
-    cursor: not-allowed;
-  }
-  
-  input:disabled + .cookies-category__slider:before {
-    background-color: var(--cookies-toggle-thumb-disabled, rgba(255, 255, 255, 0.3));
-  }
-  
-  .cookies-modal__footer {
-    padding: 1.5rem;
-    background: var(--cookies-modal-footer, rgba(0, 0, 0, 0.1));
-    text-align: right;
-  }
-  
-  [data-theme="light"] .cookies-modal__footer {
-    --cookies-modal-footer: rgba(0, 0, 0, 0.03);
-  }
-</style>
-
-<script>
-  // Show cookies banner if not accepted yet
-  document.addEventListener('DOMContentLoaded', function() {
-    const cookiesBanner = document.getElementById('cookiesBanner');
-    const cookiesConfigIcon = document.getElementById('cookiesConfigIcon');
-    const cookiesModal = document.getElementById('cookiesModal');
-    const acceptCookiesBtn = document.getElementById('acceptCookies');
-    const configureCookiesBtn = document.getElementById('configureCookies');
-    const closeCookiesModalBtn = document.getElementById('closeCookiesModal');
-    const saveCookiePrefsBtn = document.getElementById('saveCookiePreferences');
-    
-    // Check if cookies were already accepted
-    if (!localStorage.getItem('cookiesAccepted')) {
-      setTimeout(() => {
-        cookiesBanner.classList.add('active');
-      }, 1000);
-    } else {
-      cookiesConfigIcon.style.display = 'block';
-    }
-    
-    // Accept all cookies
-    acceptCookiesBtn.addEventListener('click', function() {
-      localStorage.setItem('cookiesAccepted', 'true');
-      localStorage.setItem('analyticsCookies', 'true');
-      localStorage.setItem('marketingCookies', 'true');
-      cookiesBanner.classList.remove('active');
-      cookiesConfigIcon.style.display = 'block';
-    });
-    
-    // Open config modal
-    configureCookiesBtn.addEventListener('click', function() {
-      cookiesModal.classList.add('active');
-    });
-    
-    // Close config modal
-    closeCookiesModalBtn.addEventListener('click', function() {
-      cookiesModal.classList.remove('active');
-    });
-    
-    // Config icon click
-    cookiesConfigIcon.addEventListener('click', function() {
-      cookiesModal.classList.add('active');
-    });
-    
-    // Save preferences
-    saveCookiePrefsBtn.addEventListener('click', function() {
-      const analyticsChecked = document.getElementById('analyticsCookies').checked;
-      const marketingChecked = document.getElementById('marketingCookies').checked;
-      
-      localStorage.setItem('cookiesAccepted', 'true');
-      localStorage.setItem('analyticsCookies', analyticsChecked);
-      localStorage.setItem('marketingCookies', marketingChecked);
-      
-      cookiesModal.classList.remove('active');
-      
-      if (!localStorage.getItem('cookiesAccepted')) {
-        cookiesBanner.classList.remove('active');
-        cookiesConfigIcon.style.display = 'block';
-      }
-    });
-    
-    // Initialize toggle states from localStorage
-    if (localStorage.getItem('analyticsCookies') === 'false') {
-      document.getElementById('analyticsCookies').checked = false;
-    }
-    
-    if (localStorage.getItem('marketingCookies') === 'false') {
-      document.getElementById('marketingCookies').checked = false;
-    }
-  });
-</script>
-    </body>
-  </html>
+  </body>
 </html>
