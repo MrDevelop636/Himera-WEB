@@ -18,7 +18,7 @@ import { initScrollProgress } from "./js/ui/scroll.min.js";
 
 // API
 
-import initContactForm from "./js/api/form.min.js";
+import Mailer from "./js/api/mailer.min.js";
 // Inicjalizacja po załadowaniu DOM
 document.addEventListener("DOMContentLoaded", () => {
   // simulateLoading(); // jeśli chcesz włączyć loader
@@ -31,5 +31,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initCookiesBanner(); // baner cookies
   initScrollProgress(); // pasek postępu scrolla
   initCounters(); // animacja liczników
-  initContactForm(); // inicjalizacja formularza kontaktowego
+  Mailer();
 });

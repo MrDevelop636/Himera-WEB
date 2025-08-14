@@ -108,6 +108,17 @@
 
     <!-- Main JS -->
     <script type="module" src="/src/pages/Home/App.min.js"></script>
+    <script> 
+        new Mailer({
+        endpoint: './api/mailer.php',
+        emailSelector: '#email',
+        subjectSelector: '#subject',
+        messageSelector: '#message',
+        buttonSelector: '#sendBtn',
+        successMessage: 'Wiadomość została wysłana!',
+        errorMessagePrefix: 'Błąd wysyłki: '
+    });
+    </script>
   </head>
   <body>
     <!-- Pasek postępu przewijania -->
