@@ -1,5 +1,5 @@
 <?php
-require_once 'https://himera.ct8.pl/lib/ENVLoader/ENVLoad.php';
+require_once 'https://himera.sumrive.eu/lib/ENVLoader/ENVLoad.php';
 
 try {
     $env = new EnvLoader(__DIR__ . '/.env');
