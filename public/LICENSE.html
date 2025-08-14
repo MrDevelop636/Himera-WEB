@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      Umowa Licencyjna Użytkownika Końcowego (EULA) — [nazwa projektu / domena]
+    </title>
+    <meta
+      name="description"
+      content="Umowa Licencyjna Użytkownika Końcowego (EULA) dla strony internetowej [nazwa projektu / domena]"
+    />
+    <style>
+      :root {
+        --bg: #f7f7f9;
+        --card: #ffffff;
+        --ink: #1f2937; /* slate-800 */
+        --muted: #6b7280; /* gray-500 */
+        --line: #e5e7eb; /* gray-200 */
+        --accent: #111827; /* near-black */
+        --brand: #0f172a; /* slate-900 */
+      }
+
+      html,
+      body {
+        height: 100%;
+        background: var(--bg);
+        color: var(--ink);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      body {
+        margin: 0;
+        font: 16px/1.7 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
+          Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji",
+          "Segoe UI Emoji";
+        letter-spacing: 0.01em;
+      }
+
+      .wrap {
+        max-width: 900px;
+        margin: 4rem auto;
+        padding: 0 1rem;
+      }
+
+      .doc {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(17, 24, 39, 0.06);
+        overflow: hidden;
+      }
+
+      header {
+        padding: 2.25rem 2rem 1.25rem;
+        border-bottom: 1px solid var(--line);
+        background: linear-gradient(180deg, #fff, #fafafa);
+      }
+
+      .eyebrow {
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        letter-spacing: 0.12em;
+        color: var(--muted);
+        margin: 0 0 0.5rem;
+        font-weight: 600;
+      }
+
+      h1 {
+        font-size: clamp(1.6rem, 2vw + 1rem, 2.2rem);
+        line-height: 1.25;
+        margin: 0 0 0.25rem;
+        color: var(--brand);
+      }
+
+      .subtitle {
+        margin: 0;
+        color: var(--muted);
+        font-size: 1rem;
+      }
+
+      main {
+        padding: 1.25rem 2rem 2rem;
+      }
+
+      .meta {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem 2rem;
+        padding: 1rem 0 1.5rem;
+        border-bottom: 1px dashed var(--line);
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .meta div strong {
+        color: var(--ink);
+        font-weight: 600;
+      }
+
+      section {
+        padding: 1.25rem 0;
+      }
+
+      h2 {
+        display: flex;
+        align-items: baseline;
+        gap: 0.75rem;
+        font-size: 1.125rem;
+        margin: 0 0 0.75rem;
+        color: var(--accent);
+        letter-spacing: 0.02em;
+      }
+
+      /* Paragraph numbering like § 1, § 2 ... */
+      section {
+        counter-increment: para;
+      }
+      h2::before {
+        content: "§ " counter(para);
+        font-variant-numeric: tabular-nums;
+        color: var(--muted);
+        font-weight: 600;
+      }
+
+      ol,
+      ul {
+        padding-left: 1.25rem;
+        margin: 0.25rem 0;
+      }
+      li {
+        margin: 0.25rem 0;
+      }
+
+      p {
+        margin: 0.25rem 0 0.75rem;
+        hyphens: auto;
+      }
+
+      .foot {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        padding-top: 1.5rem;
+        border-top: 1px dashed var(--line);
+        margin-top: 0.5rem;
+      }
+
+      .sig {
+        border: 1px dashed var(--line);
+        border-radius: 12px;
+        padding: 1rem;
+        min-height: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .label {
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+      .name {
+        font-weight: 600;
+      }
+
+      /* Print styles */
+      @media print {
+        body {
+          background: #fff;
+        }
+        .wrap {
+          margin: 0;
+        }
+        .doc {
+          box-shadow: none;
+          border-radius: 0;
+        }
+        header {
+          background: #fff;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <article class="doc" role="document">
+        <header>
+          <p class="eyebrow">Umowa licencyjna użytkownika końcowego</p>
+          <h1>UMOWA LICENCYJNA UŻYTKOWNIKA KOŃCOWEGO (EULA)</h1>
+          <p class="subtitle">
+            Dotycząca
+            <strong
+              >Web app -
+              <a href="https://himera.sumrive.eu" target="_blank"
+                >https://himera.sumrive.eu</a
+              ></strong
+            >
+          </p>
+        </header>
+
+        <main>
+          <div class="meta" aria-label="Metryka umowy">
+            <div><strong>Licencjodawca:</strong> SUMRIVE.EU</div>
+            <div>
+              <strong>Licencjobiorca:</strong> Użytkownik końcowy akceptujący
+              warunki niniejszej Umowy
+            </div>
+            <div><strong>Wersja dokumentu:</strong> 1.0</div>
+            <div><strong>Data obowiązywania:</strong> [rrrr-mm-dd]</div>
+          </div>
+
+          <section id="definicje">
+            <h2>Definicje</h2>
+            <ol>
+              <li>
+                <strong>Licencjodawca</strong> – [pełna nazwa firmy / imię i
+                nazwisko], z siedzibą w [adres], NIP: [NIP], REGON: [REGON],
+                będący właścicielem praw autorskich do Oprogramowania.
+              </li>
+              <li>
+                <strong>Licencjobiorca</strong> – osoba fizyczna, osoba prawna
+                lub jednostka organizacyjna, która uzyskała dostęp do
+                Oprogramowania i akceptuje warunki niniejszej Umowy.
+              </li>
+              <li>
+                <strong>Oprogramowanie</strong> – strona internetowa dostępna
+                pod adresem [adres domeny], wraz z jej kodem źródłowym,
+                strukturą plików, bazą danych, elementami wizualnymi, grafikami,
+                skryptami, treściami oraz materiałami pomocniczymi.
+              </li>
+              <li>
+                <strong>Korzystanie</strong> – wszelkie działania Licencjobiorcy
+                związane z używaniem Oprogramowania w sposób przewidziany w
+                niniejszej Umowie.
+              </li>
+            </ol>
+          </section>
+
+          <section id="przedmiot-licencji">
+            <h2>Przedmiot licencji</h2>
+            <ol>
+              <li>
+                Licencjodawca udziela Licencjobiorcy niewyłącznej, niezbywalnej
+                licencji na korzystanie z Oprogramowania wyłącznie w formie i
+                zakresie określonym w niniejszej Umowie.
+              </li>
+              <li>
+                Licencja nie przenosi na Licencjobiorcę żadnych autorskich praw
+                majątkowych ani praw do znaków towarowych.
+              </li>
+              <li>
+                Licencja obejmuje wyłącznie prawo do użytkowania Oprogramowania
+                w stanie dostarczonym przez Licencjodawcę.
+              </li>
+            </ol>
+          </section>
+
+          <section id="zakres-korzystania">
+            <h2>Zakres dozwolonego korzystania</h2>
+            <ol>
+              <li>
+                Licencjobiorca jest uprawniony do dostępu i korzystania z
+                Oprogramowania w celu, dla którego zostało ono stworzone.
+              </li>
+              <li>
+                Licencjobiorca może użytkować Oprogramowanie wyłącznie w
+                środowisku wskazanym przez Licencjodawcę.
+              </li>
+            </ol>
+          </section>
+
+          <section id="zakazy">
+            <h2>Zakazy</h2>
+            <ol>
+              <li>
+                Dokonywania jakichkolwiek modyfikacji Oprogramowania, w tym jego
+                kodu źródłowego, struktury, logiki działania oraz interfejsu
+                graficznego.
+              </li>
+              <li>
+                Dekompilacji, dezasemblacji, inżynierii wstecznej lub innej
+                próby uzyskania dostępu do kodu źródłowego, o ile bezwzględnie
+                obowiązujące przepisy prawa nie stanowią inaczej.
+              </li>
+              <li>
+                Usuwania lub zmieniania informacji o prawach autorskich, znakach
+                towarowych lub oznaczeniach identyfikujących Licencjodawcę.
+              </li>
+              <li>
+                Rozpowszechniania, sprzedaży, wynajmu, dzierżawy,
+                sublicencjonowania bądź przekazywania Oprogramowania osobom
+                trzecim w jakiejkolwiek formie.
+              </li>
+              <li>Tworzenia dzieł pochodnych na podstawie Oprogramowania.</li>
+            </ol>
+          </section>
+
+          <section id="prawa-autorskie">
+            <h2>Prawa autorskie</h2>
+            <ol>
+              <li>
+                Oprogramowanie stanowi utwór w rozumieniu ustawy z dnia 4 lutego
+                1994 r. o prawie autorskim i prawach pokrewnych.
+              </li>
+              <li>
+                Wszelkie autorskie prawa osobiste i majątkowe do Oprogramowania
+                przysługują wyłącznie Licencjodawcy.
+              </li>
+            </ol>
+          </section>
+
+          <section id="gwarancja-odpowiedzialnosc">
+            <h2>Gwarancja i odpowiedzialność</h2>
+            <ol>
+              <li>
+                Oprogramowanie jest dostarczane w stanie „takim, jakie jest”
+                (<em>as is</em>), bez jakichkolwiek gwarancji co do działania,
+                przydatności do określonego celu czy kompatybilności.
+              </li>
+              <li>
+                Licencjodawca nie ponosi odpowiedzialności za jakiekolwiek
+                szkody bezpośrednie, pośrednie, uboczne, wtórne lub szczególne
+                wynikające z korzystania z Oprogramowania lub niemożności
+                korzystania z niego.
+              </li>
+              <li>
+                Postanowienia niniejszej Umowy nie wyłączają odpowiedzialności
+                Licencjodawcy w zakresie, w jakim nie może być ona wyłączona na
+                mocy bezwzględnie obowiązujących przepisów prawa.
+              </li>
+            </ol>
+          </section>
+
+          <section id="okres-rozwiazanie">
+            <h2>Okres obowiązywania i rozwiązanie</h2>
+            <ol>
+              <li>
+                Umowa obowiązuje od momentu uzyskania dostępu do Oprogramowania
+                przez Licencjobiorcę i pozostaje w mocy do czasu jej
+                rozwiązania.
+              </li>
+              <li>
+                Licencja wygasa automatycznie w przypadku naruszenia przez
+                Licencjobiorcę któregokolwiek z postanowień niniejszej Umowy.
+              </li>
+              <li>
+                Po wygaśnięciu lub rozwiązaniu Umowy Licencjobiorca jest
+                zobowiązany niezwłocznie zaprzestać korzystania z
+                Oprogramowania.
+              </li>
+            </ol>
+          </section>
+
+          <section id="postanowienia-koncowe">
+            <h2>Postanowienia końcowe</h2>
+            <ol>
+              <li>Niniejsza Umowa podlega prawu polskiemu.</li>
+              <li>
+                Wszelkie spory wynikające z niniejszej Umowy będą rozstrzygane
+                przez sąd właściwy dla siedziby Licencjodawcy.
+              </li>
+              <li>
+                Jeżeli którekolwiek z postanowień Umowy zostanie uznane za
+                nieważne lub niewykonalne, pozostałe postanowienia pozostają w
+                mocy.
+              </li>
+              <li>
+                Brak akceptacji warunków niniejszej Umowy oznacza brak prawa do
+                korzystania z Oprogramowania.
+              </li>
+            </ol>
+          </section>
+
+          <section class="foot" aria-label="Podpisy">
+            <div class="sig">
+              <div class="label">Licencjodawca</div>
+              <div class="name">P. Mateusz Gniadzik - SUMRIVE.EU</div>
+              <div class="label">Data i podpis: __________________________</div>
+            </div>
+            <div class="sig">
+              <div class="label">Licencjobiorca</div>
+              <div class="name">P. Mariusz Ciechańczyk</div>
+              <div class="label">Data akceptacji: ________________________</div>
+            </div>
+          </section>
+        </main>
+      </article>
+    </div>
+  </body>
+</html>
