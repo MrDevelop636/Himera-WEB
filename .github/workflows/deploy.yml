@@ -63,13 +63,17 @@ jobs:
           state-name: .ftp-deploy-sync-state-backend.json
           dangerous-clean-slate: false
 
-      # Pushover notification
       - name: Send Pushover Notification
         if: success()
         run: |
           curl -s \
             -F "token=${{ secrets.PUSHOVER_API_TOKEN }}" \
             -F "user=${{ secrets.PUSHOVER_USER_KEY }}" \
-            -F "title=Deployment Successful" \
-            -F "message=Projekt został pomyślnie wdrożony na serwer." \
+            -F "title=Deployment Successful 🚀" \
+            -F "message=Repo: ${{ github.repository }}
+            Commit: ${{ github.sha }}
+            Author: ${{ github.actor }}
+            Message: ${{ github.event.head_commit.message }}
+            Branch: ${{ github.ref_name }}
+            Date: $(date '+%Y-%m-%d %H:%M:%S')" \
             https://api.pushover.net/1/messages.json
