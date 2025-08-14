@@ -3,38 +3,32 @@ name: Build & Deploy Frontend + Backend PHP
 on:
   push:
     branches:
-      - main # uruchamianie dla pushów do main
+      - main
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Pobranie repo
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2. Instalacja Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      # 3. Konfiguracja użytkownika git (rozwiązuje błąd commit w postbuild)
       - name: Configure Git user
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
 
-      # 4. Instalacja zależności frontu
       - name: Install dependencies
         run: npm ci
 
-      # 5. Build frontu
       - name: Build Vite project
         run: npm run build
 
-      # 6. Deploy frontend do public_html
       - name: Deploy frontend via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
@@ -46,7 +40,6 @@ jobs:
           state-name: .ftp-deploy-sync-state-frontend.json
           dangerous-clean-slate: false
 
-      # 7. Deploy backend PHP do public_html/api
       - name: Deploy backend via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
@@ -58,11 +51,10 @@ jobs:
           state-name: .ftp-deploy-sync-state-backend.json
           dangerous-clean-slate: false
 
-
       - name: Deploy libs via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          passive: true  
+          passive: true
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
@@ -70,3 +62,14 @@ jobs:
           server-dir: /public_html/lib/
           state-name: .ftp-deploy-sync-state-backend.json
           dangerous-clean-slate: false
+
+      # Pushover notification
+      - name: Send Pushover Notification
+        if: success()
+        run: |
+          curl -s \
+            -F "token=${{ secrets.PUSHOVER_API_TOKEN }}" \
+            -F "user=${{ secrets.PUSHOVER_USER_KEY }}" \
+            -F "title=Deployment Successful" \
+            -F "message=Projekt został pomyślnie wdrożony na serwer." \
+            https://api.pushover.net/1/messages.json
