@@ -77,4 +77,4 @@ Licencjobiorcy surowo zabrania się:
 [Data i podpis]
 
 **Licencjobiorca:**  
-Akceptacja Umowy w formie elektronicznej następuje poprzez rozpoczęcie korzystania z Oprogramowania.
+Akceptacja Umowy w formie elektronicznej następuje poprzez rozpoczęcie korzystania z Oprogramowania
