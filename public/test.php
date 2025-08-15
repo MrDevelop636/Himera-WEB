@@ -1,5 +1,5 @@
 <?php
-require './lib/phpdotenv-5.6.2/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 
 use Dotenv\Dotenv;
 
