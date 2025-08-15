@@ -10,7 +10,7 @@ require __DIR__ . '/../../vendor/autoload.php';
 use Dotenv\Dotenv;
 
 // Utworzenie instancji Dotenv i wskazanie ścieżki do pliku .env
-$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv = Dotenv::createImmutable(__DIR__ . '/../../');
 $dotenv->load(); // Ładuje zmienne środowiskowe do $_ENV i $_SERVER
 
 // Funkcja pomocnicza do pobierania zmiennych
