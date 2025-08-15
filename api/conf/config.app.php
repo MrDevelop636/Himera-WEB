@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 
 // config.app.php
 
-require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '/../../vendor/autoload.php';
 
 use Dotenv\Dotenv;
 
