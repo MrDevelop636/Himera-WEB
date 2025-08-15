@@ -14,7 +14,7 @@ $dbName = $config['database']['database'];
 $mysqli = new mysqli($dbHost, $dbUser, $dbPass, $dbName);
 
 if ($mysqli->connect_error) {
-    die("Błąd połączenia z bazą: " . $mysqli->connect_error);
+    die("Unable connect to database: " . $mysqli->connect_error);
+} else {
+    die("Connected to database");
 }
-
-echo "Połączono z bazą danych!";
