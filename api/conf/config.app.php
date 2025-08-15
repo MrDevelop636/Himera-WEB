@@ -1,16 +1,18 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 // config.app.php
+
+if (php_sapi_name() !== 'cli' && realpath(__FILE__) === realpath($_SERVER['SCRIPT_FILENAME'])) {
+    http_response_code(403);
+    exit('Dostęp zabroniony.');
+}
+
 
 require __DIR__ . '/../../vendor/autoload.php';
 
 use Dotenv\Dotenv;
 
 // Utworzenie instancji Dotenv i wskazanie ścieżki do pliku .env
-$dotenv = Dotenv::createImmutable(__DIR__ . '/../../');
+$dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load(); // Ładuje zmienne środowiskowe do $_ENV i $_SERVER
 
 // Funkcja pomocnicza do pobierania zmiennych
@@ -36,9 +38,3 @@ $config = [
     ]
 ];
 
-// Jeśli chcesz sprawdzić działanie:
-if ($config['app']['name']) {
-    echo "<pre>";
-    print_r($config);
-    echo "</pre>";
-}
