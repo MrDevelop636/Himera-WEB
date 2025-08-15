@@ -3,7 +3,6 @@
 
 if (php_sapi_name() !== 'cli' && realpath(__FILE__) === realpath($_SERVER['SCRIPT_FILENAME'])) {
     http_response_code(403);
-    exit('Dostęp zabroniony.');
 }
 
 
