@@ -19,89 +19,138 @@ const initScrollAnimations2 = () => {
     ease: "power3.out"
   });
 
+  // Animacja wskazówki scroll
+  gsap.from(".hero__scroll-hint", {
+    opacity: 0,
+    y: 20,
+    delay: 1.5,
+    duration: 0.8,
+    ease: "power2.out"
+  });
+
   // --------------------------------------------
   // 2. Animacje sekcji Mission & Vision
   // --------------------------------------------
-  ScrollTrigger.create({
-    trigger: ".mission-vision",
-    start: "top 80%",
-    onEnter: () => {
-      gsap.to(".mission-vision__content", {
-        opacity: 1,
-        x: 0,
-        duration: 1,
-        ease: "power3.out"
-      });
+  gsap.from(".mission-vision__content", {
+    scrollTrigger: {
+      trigger: ".mission-vision",
+      start: "top 80%",
+      toggleActions: "play none none none"
+    },
+    opacity: 0,
+    x: -50,
+    duration: 1,
+    ease: "power3.out"
+  });
 
-      gsap.to(".mission-vision__image", {
-        opacity: 1,
-        x: 0,
-        duration: 1,
-        delay: 0.3,
-        ease: "power3.out"
-      });
-    }
+  gsap.from(".mission-vision__image", {
+    scrollTrigger: {
+      trigger: ".mission-vision",
+      start: "top 80%",
+      toggleActions: "play none none none"
+    },
+    opacity: 0,
+    x: 50,
+    duration: 1,
+    delay: 0.3,
+    ease: "power3.out"
   });
 
   // Statystyki
-  gsap.to(".about__stat", {
+  gsap.from(".about__stat", {
     scrollTrigger: {
-      trigger: ".mission-vision",
-      start: "top 70%"
+      trigger: ".about__stats",
+      start: "top 80%"
     },
-    opacity: 1,
-    y: 0,
+    opacity: 0,
+    y: 30,
     duration: 0.8,
-    stagger: 0.1,
+    stagger: 0.2,
     ease: "back.out"
   });
 
   // --------------------------------------------
   // 3. Animacje sekcji Team
   // --------------------------------------------
-  gsap.to(".team-member", {
+  gsap.from(".team-member", {
     scrollTrigger: {
       trigger: ".team",
-      start: "top 80%",
+      start: "top 70%",
       toggleActions: "play none none none"
     },
-    opacity: 1,
-    y: 0,
+    opacity: 0,
+    y: 50,
     duration: 0.8,
     stagger: 0.2,
     ease: "power3.out"
   });
 
+  // Animacja nagłówka sekcji
+  gsap.from(".team .section__header", {
+    scrollTrigger: {
+      trigger: ".team",
+      start: "top 85%"
+    },
+    opacity: 0,
+    y: 30,
+    duration: 0.8,
+    ease: "power2.out"
+  });
+
   // --------------------------------------------
   // 4. Animacje osi czasu (Timeline)
   // --------------------------------------------
-  gsap.to(".timeline-item", {
+  gsap.from(".timeline-item", {
     scrollTrigger: {
       trigger: ".history-timeline",
-      start: "top 80%",
+      start: "top 70%",
       toggleActions: "play none none none"
     },
-    opacity: 1,
-    x: 0,
+    opacity: 0,
+    y: 50,
     duration: 0.8,
     stagger: 0.3,
     ease: "power2.out"
   });
 
-  // --------------------------------------------
-  // 5. Animacje kart technologii (Values)
-  // --------------------------------------------
-  gsap.to(".tech-card", {
+  // Animacja nagłówka sekcji
+  gsap.from(".history-timeline .section__header", {
     scrollTrigger: {
-      trigger: ".technology",
-      start: "top 80%",
+      trigger: ".history-timeline",
+      start: "top 85%"
+    },
+    opacity: 0,
+    y: 30,
+    duration: 0.8,
+    ease: "power2.out"
+  });
+
+  // --------------------------------------------
+  // 5. Animacje kart wartości (Core Values)
+  // --------------------------------------------
+  gsap.from(".tech-card", {
+    scrollTrigger: {
+      trigger: ".core-values",
+      start: "top 70%",
       toggleActions: "play none none none"
     },
-    opacity: 1,
-    y: 0,
+    opacity: 0,
+    y: 50,
     duration: 0.6,
-    stagger: 0.15,
-    ease: "back.out"
+    stagger: 0.2,
+    ease: "back.out(1.7)"
+  });
+
+  // Animacja nagłówka sekcji
+  gsap.from(".core-values .section__header", {
+    scrollTrigger: {
+      trigger: ".core-values",
+      start: "top 85%"
+    },
+    opacity: 0,
+    y: 30,
+    duration: 0.8,
+    ease: "power2.out"
   });
 };
 
