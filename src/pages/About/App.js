@@ -4,6 +4,7 @@
 // import simulateLoading from "./animation/loader.js"; // opcjonalnie
 import CustomCursor from "./js/animation/cursor.min.js";
 import initScrollAnimations2 from "./js/animation/about.min.js";
+import initScrollAnimations from "./js/animation/scroll.min.js";
 
 // Komponenty
 import initModelsSlider from "./js/components/slider.min.js";
@@ -22,6 +23,7 @@ import Mailer from "./js/api/mailer.min.js";
 document.addEventListener("DOMContentLoaded", () => {
   // simulateLoading(); // jeśli chcesz włączyć loader
   new CustomCursor();
+  initScrollAnimations();
   initScrollAnimations2();
   initNavbar();
   initThemeToggle();
