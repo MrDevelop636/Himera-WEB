@@ -10,7 +10,6 @@
 ## 📦 Main Dependencies
 
 ### Core Libraries
-- <img src="https://cdn.simpleicons.org/threedotjs" width="18" alt="Three.js" /> **Three.js** (`^0.179.1`) – 3D/WebGL rendering  
 - <img src="https://cdn.simpleicons.org/greensock" width="18" alt="GSAP" /> **GSAP** (`^3.13.0`) – advanced animations  
 - 🎠 **Splide.js** (`^4.1.4`) – carousels/sliders  
 
