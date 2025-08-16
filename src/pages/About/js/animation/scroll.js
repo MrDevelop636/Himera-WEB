@@ -8,57 +8,43 @@ if (typeof window !== "undefined") {
 
 function initScrollAnimations() {
   // Hero section
-  const heroAnimations = () => {
-gsap.to('.hero__title', {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          ease: 'power3.out'
-        })
-        gsap.to('.hero__subtitle', {
-          opacity: 1,
-          y: 0,
-          duration: 0.6,
-          ease: 'power2.out'
-        }, '-=0.4')
-        gsap.to('.hero__cta', {
-          opacity: 1,
-          y: 0,
-          duration: 0.5,
-          ease: 'power2.out'
-        }, '-=0.3')
-        gsap.to('.hero__scroll-hint', {
-          opacity: 1,
-          y: 0,
-          duration: 0.5,
-          ease: 'power2.out'
-        }, '-=0.2');
+const heroAnimations = () => {
+  // Tworzymy timeline dla sekwencyjnych animacji
+  const heroTimeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".hero",
+      start: "top top",
+      toggleActions: "play none none none",
+    }
+  });
 
-    gsap.to(".hero__cta", {
-      scrollTrigger: {
-        trigger: ".hero",
-        start: "top top",
-        toggleActions: "play none none none",
-      },
+  // Sekwencja animacji
+  heroTimeline
+    .to('.hero__title', {
       opacity: 1,
       y: 0,
-      duration: 1.2,
-      delay: 0.6,
-      ease: "power3.out",
-    });
-
-    gsap.to(".hero__model", {
-      scrollTrigger: {
-        trigger: ".hero",
-        start: "top top",
-        toggleActions: "play none none none",
-      },
+      duration: 0.8,
+      ease: 'power3.out'
+    })
+    .to('.hero__subtitle', {
       opacity: 1,
-      duration: 1.5,
-      delay: 0.9,
-      ease: "power3.out",
-    });
-  };
+      y: 0,
+      duration: 0.6,
+      ease: 'power2.out'
+    }, '-=0.4') // Nakładanie się na poprzednią animację o 0.4s
+    .to('.hero__cta', {
+      opacity: 1,
+      y: 0,
+      duration: 0.5,
+      ease: 'power2.out'
+    }, '-=0.3') // Nakładanie się na poprzednią animację o 0.3s
+    .to('.hero__scroll-hint', {
+      opacity: 1,
+      y: 0,
+      duration: 0.5,
+      ease: 'power2.out'
+    }, '-=0.2'); // Nakładanie się na poprzednią animację o 0.2s
+};
 
   // About section
   const aboutAnimations = () => {
