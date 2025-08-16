@@ -12,7 +12,7 @@ const initScrollAnimations2 = () => {
   // 1. Animacje sekcji Hero
   // --------------------------------------------
   gsap.to(".hero__title, .hero__subtitle, .hero__cta", {
-    opacity: 0,
+    opacity: 1,
     y: 40,
     duration: 1.2,
     stagger: 0.3,
