@@ -10,28 +10,11 @@ function initScrollAnimations() {
   // Hero section
 const heroAnimations = () => {
   // Usuwamy ScrollTrigger i zostawiamy samą animację
-  gsap.to(".about__content", {
-    opacity: 1,
-    x: 0,
-    duration: 1,
-    ease: "power3.out",
-  });
-
-  gsap.to(".about__media", {
-    opacity: 1,
-    x: 0,
-    duration: 1,
-    delay: 0.3,
-    ease: "power3.out",
-  });
-
-  gsap.to(".about__stat", {
-    opacity: 1,
-    y: 0,
-    duration: 0.8,
-    stagger: 0.1,
-    ease: "power3.out",
-  });
+  gsap.timeline()
+    .to('.hero__title', { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' })
+    .to('.hero__subtitle', { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }, '-=0.4')
+    .to('.hero__cta', { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, '-=0.3')
+    .to('.hero__scroll-hint', { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, '-=0.2');
 };
   // Inicjalizacja wszystkich animacji
   const initAllAnimations = () => {
