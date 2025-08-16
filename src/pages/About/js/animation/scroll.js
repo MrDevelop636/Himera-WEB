@@ -7,22 +7,44 @@ if (typeof window !== "undefined") {
 }
 
 function initScrollAnimations() {
-  // Hero section
+  // Hero section - zachowane animacje z pierwszego przykładu
   const heroAnimations = () => {
-    gsap.from(".hero__title, .hero__subtitle, .hero__cta", {
-      opacity: 0,
-      y: 40,
+    gsap.to(".hero__title", {
+      scrollTrigger: {
+        trigger: ".hero",
+        start: "top top",
+        toggleActions: "play none none none",
+      },
+      opacity: 1,
+      y: 0,
       duration: 1.2,
-      stagger: 0.3,
-      ease: "power3.out"
+      ease: "power3.out",
     });
 
-    gsap.from(".hero__scroll-hint", {
-      opacity: 0,
-      y: 20,
-      delay: 1.5,
-      duration: 0.8,
-      ease: "power2.out"
+    gsap.to(".hero__subtitle", {
+      scrollTrigger: {
+        trigger: ".hero",
+        start: "top top",
+        toggleActions: "play none none none",
+      },
+      opacity: 1,
+      y: 0,
+      duration: 1.2,
+      delay: 0.3,
+      ease: "power3.out",
+    });
+
+    gsap.to(".hero__cta", {
+      scrollTrigger: {
+        trigger: ".hero",
+        start: "top top",
+        toggleActions: "play none none none",
+      },
+      opacity: 1,
+      y: 0,
+      duration: 1.2,
+      delay: 0.6,
+      ease: "power3.out",
     });
   };
 
