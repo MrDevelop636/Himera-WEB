@@ -3,7 +3,7 @@
 // Animacje
 // import simulateLoading from "./animation/loader.js"; // opcjonalnie
 import CustomCursor from "./js/animation/cursor.min.js";
-import initScrollAnimations2 from "./js/animation/about.js";
+import initScrollAnimations2 from "./js/animation/about.min.js";
 
 // Komponenty
 import initModelsSlider from "./js/components/slider.min.js";
