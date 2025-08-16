@@ -1,7 +1,7 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-
+gsap.registerPlugin(ScrollTrigger);
 function initScrollAnimations() {
   // Hero section
 
@@ -19,7 +19,7 @@ const heroAnimations = () => {
     gsap.to(".about__content", {
       scrollTrigger: {
         trigger: ".about",
-        start: "top 80%",
+        start: "top 90%",
         toggleActions: "play none none none",
       },
       opacity: 1,
@@ -31,7 +31,7 @@ const heroAnimations = () => {
     gsap.to(".about__media", {
       scrollTrigger: {
         trigger: ".about",
-        start: "top 80%",
+        start: "top 90%",
         toggleActions: "play none none none",
       },
       opacity: 1,
@@ -44,7 +44,7 @@ const heroAnimations = () => {
     gsap.to(".about__stat", {
       scrollTrigger: {
         trigger: ".about",
-        start: "top 70%",
+        start: "top 90%",
         toggleActions: "play none none none",
       },
       opacity: 1,
