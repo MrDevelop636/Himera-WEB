@@ -8,57 +8,15 @@ if (typeof window !== "undefined") {
 
 function initScrollAnimations() {
   // Hero section
-  const heroAnimations = () => {
-    gsap.to(".hero__title", {
-      scrollTrigger: {
-        trigger: ".hero",
-        start: "top top",
-        toggleActions: "play none none none",
-      },
-      opacity: 1,
-      y: 0,
-      duration: 1.2,
-      ease: "power3.out",
-    });
 
-    gsap.to(".hero__subtitle", {
-      scrollTrigger: {
-        trigger: ".hero",
-        start: "top top",
-        toggleActions: "play none none none",
-      },
-      opacity: 1,
-      y: 0,
-      duration: 1.2,
-      delay: 0.3,
-      ease: "power3.out",
-    });
-
-    gsap.to(".hero__cta", {
-      scrollTrigger: {
-        trigger: ".hero",
-        start: "top top",
-        toggleActions: "play none none none",
-      },
-      opacity: 1,
-      y: 0,
-      duration: 1.2,
-      delay: 0.6,
-      ease: "power3.out",
-    });
-
-    gsap.to(".hero__model", {
-      scrollTrigger: {
-        trigger: ".hero",
-        start: "top top",
-        toggleActions: "play none none none",
-      },
-      opacity: 1,
-      duration: 1.5,
-      delay: 0.9,
-      ease: "power3.out",
-    });
-  };
+const heroAnimations = () => {
+  // Animacje wykonają się tylko raz przy ładowaniu
+  gsap.timeline()
+    .to('.hero__title', { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' })
+    .to('.hero__subtitle', { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }, '-=0.4')
+    .to('.hero__cta', { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, '-=0.3')
+    .to('.hero__scroll-hint', { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, '-=0.2');
+};
 
   // About section
   const aboutAnimations = () => {
