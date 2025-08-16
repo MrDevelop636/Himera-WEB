@@ -11,6 +11,10 @@ const initScrollAnimations2 = () => {
   // --------------------------------------------
   // 1. Animacje sekcji Hero
   // --------------------------------------------
+    ScrollTrigger.create({
+    trigger: ".mission-vision",
+    start: "top 100%",
+    onEnter: () => {
   gsap.to(".hero__title, .hero__subtitle, .hero__cta", {
     opacity: 1,
     y: 40,
@@ -18,6 +22,8 @@ const initScrollAnimations2 = () => {
     stagger: 0.3,
     ease: "power3.out"
   });
+}
+    });
   // --------------------------------------------
   // 2. Animacje sekcji Mission & Vision
   // --------------------------------------------
