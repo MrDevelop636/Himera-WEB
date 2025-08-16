@@ -8,7 +8,8 @@ if (typeof window !== "undefined") {
 
 function initScrollAnimations() {
   // Hero section
-  const heroAnimations = () => {
+const heroAnimations = () => {
+  const ctx = gsap.context(() => {
     gsap.from(".hero__title, .hero__subtitle, .hero__cta", {
       opacity: 0,
       y: 40,
@@ -24,7 +25,10 @@ function initScrollAnimations() {
       duration: 0.8,
       ease: "power2.out"
     });
-  };
+  });
+
+  return () => ctx.revert(); // cleanup function
+};
 
   // Mission & Vision section
   const missionAnimations = () => {
