@@ -9,30 +9,30 @@ if (typeof window !== "undefined") {
 function initScrollAnimations() {
   // Hero section
   const heroAnimations = () => {
-    gsap.to(".hero__title", {
-      scrollTrigger: {
-        trigger: ".hero",
-        start: "top top",
-        toggleActions: "play none none none",
-      },
-      opacity: 1,
-      y: 0,
-      duration: 1.2,
-      ease: "power3.out",
-    });
-
-    gsap.to(".hero__subtitle", {
-      scrollTrigger: {
-        trigger: ".hero",
-        start: "top top",
-        toggleActions: "play none none none",
-      },
-      opacity: 1,
-      y: 0,
-      duration: 1.2,
-      delay: 0.3,
-      ease: "power3.out",
-    });
+gsap.to('.hero__title', {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          ease: 'power3.out'
+        })
+        gsap.to('.hero__subtitle', {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          ease: 'power2.out'
+        }, '-=0.4')
+        gsap.to('.hero__cta', {
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+          ease: 'power2.out'
+        }, '-=0.3')
+        gsap.to('.hero__scroll-hint', {
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+          ease: 'power2.out'
+        }, '-=0.2');
 
     gsap.to(".hero__cta", {
       scrollTrigger: {
