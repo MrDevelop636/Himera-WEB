@@ -1,23 +1,47 @@
-// Theme toggle
 function initThemeToggle() {
+  const root = document.documentElement;
   const themeToggle = document.querySelector(".navbar__theme-toggle");
   const themeIcon = document.querySelector(".theme-icon");
+  const cookieSettingsIcon = document.querySelector(".cookies-icon");
 
-  themeToggle.addEventListener("click", () => {
-    const currentTheme = document.documentElement.getAttribute("data-theme");
+  const THEMES = {
+    dark: {
+      icon: "brightness_4",
+      iconColor: "#ffffff",
+      cookieColor: "#ffffff"
+    },
+    light: {
+      icon: "brightness_7",
+      iconColor: "#333333",
+      cookieColor: "#333333"
+    }
+  };
+
+  const updateTheme = (theme) => {
+    if (themeIcon) {
+      themeIcon.textContent = THEMES[theme].icon;
+      themeIcon.style.color = THEMES[theme].iconColor;
+    }
+    if (cookieSettingsIcon) {
+      cookieSettingsIcon.style.color = THEMES[theme].cookieColor;
+    }
+  };
+
+  const toggleTheme = () => {
+    const currentTheme = root.getAttribute("data-theme");
     const newTheme = currentTheme === "dark" ? "light" : "dark";
-
-    document.documentElement.setAttribute("data-theme", newTheme);
-    themeIcon.textContent =
-      newTheme === "dark" ? "brightness_4" : "brightness_7";
+    root.setAttribute("data-theme", newTheme);
     localStorage.setItem("theme", newTheme);
-  });
+    updateTheme(newTheme);
+  };
 
-  // Check for saved theme preference
+  if (themeToggle) {
+    themeToggle.addEventListener("click", toggleTheme);
+  }
+
   const savedTheme = localStorage.getItem("theme") || "dark";
-  document.documentElement.setAttribute("data-theme", savedTheme);
-  themeIcon.textContent =
-    savedTheme === "dark" ? "brightness_4" : "brightness_7";
+  root.setAttribute("data-theme", savedTheme);
+  updateTheme(savedTheme);
 }
 
 export default initThemeToggle;
