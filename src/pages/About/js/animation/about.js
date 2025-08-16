@@ -18,7 +18,6 @@ const initScrollAnimations2 = () => {
     stagger: 0.3,
     ease: "power3.out"
   });
-
   // --------------------------------------------
   // 2. Animacje sekcji Mission & Vision
   // --------------------------------------------
