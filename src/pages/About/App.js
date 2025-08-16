@@ -22,7 +22,6 @@ import Mailer from "./js/api/mailer.min.js";
 document.addEventListener("DOMContentLoaded", () => {
   // simulateLoading(); // jeśli chcesz włączyć loader
   new CustomCursor();
-  initScrollAnimations();
   initScrollAnimations2();
   initNavbar();
   initThemeToggle();
