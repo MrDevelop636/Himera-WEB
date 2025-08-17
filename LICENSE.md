@@ -1,80 +1,93 @@
-# UMOWA LICENCYJNA UŻYTKOWNIKA KOŃCOWEGO (EULA)
+# END USER LICENSE AGREEMENT (EULA)
 
-**dotycząca strony internetowej [nazwa projektu / domena]**
-
----
-
-## § 1. Definicje
-
-1. **Licencjodawca** – [pełna nazwa firmy / imię i nazwisko], z siedzibą w [adres], NIP: [NIP], REGON: [REGON], będący właścicielem wszelkich praw autorskich i majątkowych do Oprogramowania.
-2. **Licencjobiorca** – osoba fizyczna, osoba prawna lub jednostka organizacyjna, która uzyskała dostęp do Oprogramowania i akceptuje warunki niniejszej Umowy.
-3. **Oprogramowanie** – strona internetowa dostępna pod adresem [adres domeny], wraz z jej kodem źródłowym, strukturą plików, bazą danych, elementami wizualnymi, grafikami, skryptami, treściami oraz wszelkimi materiałami pomocniczymi.
-4. **Korzystanie** – wszelkie działania Licencjobiorcy związane z używaniem Oprogramowania w sposób przewidziany w niniejszej Umowie.
+**concerning the website [project name / domain]**
 
 ---
 
-## § 2. Przedmiot licencji
+## 1. Definitions
 
-1. Licencjodawca udziela Licencjobiorcy niewyłącznej, niezbywalnej licencji na korzystanie z Oprogramowania wyłącznie w formie i zakresie określonym w niniejszej Umowie.
-2. Licencja nie przenosi na Licencjobiorcę żadnych praw autorskich, majątkowych ani praw do znaku towarowego.
-3. Licencja obejmuje wyłącznie prawo do użytkowania Oprogramowania w stanie dostarczonym przez Licencjodawcę.
-
----
-
-## § 3. Zakres dozwolonego korzystania
-
-1. Licencjobiorca jest uprawniony do dostępu i korzystania z Oprogramowania w celu, dla którego zostało ono stworzone.
-2. Licencjobiorca może użytkować Oprogramowanie wyłącznie w środowisku wskazanym przez Licencjodawcę.
+1. **Licensor** – [full company name / full name], with its registered office at [address], being the sole owner of all copyrights and proprietary rights to the Software.  
+2. **Licensee** – any natural person, legal entity, or organizational unit that has gained access to the Software and accepts the terms of this Agreement.  
+3. **Software** – the website available at [domain address], including its source code, file structure, database, visual elements, graphics, scripts, content, and any auxiliary materials.  
+4. **Use** – any actions by the Licensee related to the use of the Software in the manner provided under this Agreement.  
 
 ---
 
-## § 4. Zakazy
+## 2. Grant of License
 
-Licencjobiorcy surowo zabrania się:
-
-1. Dokonywania jakichkolwiek modyfikacji Oprogramowania, w tym jego kodu źródłowego, struktury, logiki działania oraz interfejsu graficznego.
-2. Dekompilacji, dezasemblacji, inżynierii wstecznej lub w inny sposób próby uzyskania dostępu do kodu źródłowego, chyba że przepisy prawa stanowią inaczej.
-3. Usuwania lub zmieniania informacji o prawach autorskich, znakach towarowych lub oznaczeniach identyfikujących Licencjodawcę.
-4. Rozpowszechniania, sprzedaży, wynajmu, dzierżawy, sublicencjonowania lub przekazywania Oprogramowania osobom trzecim w jakiejkolwiek formie.
-5. Tworzenia dzieł pochodnych na podstawie Oprogramowania.
+1. The Licensor grants the Licensee a non-exclusive, non-transferable, revocable license to use the Software solely in the form and scope defined by this Agreement.  
+2. The License does not transfer to the Licensee any copyrights, proprietary rights, or trademark rights.  
+3. The License only covers the right to use the Software in the condition delivered by the Licensor.  
 
 ---
 
-## § 5. Prawa autorskie
+## 3. Permitted Use
 
-1. Oprogramowanie stanowi utwór w rozumieniu ustawy z dnia 4 lutego 1994 r. o prawie autorskim i prawach pokrewnych.
-2. Wszelkie prawa autorskie osobiste i majątkowe do Oprogramowania przysługują wyłącznie Licencjodawcy.
-
----
-
-## § 6. Gwarancja i odpowiedzialność
-
-1. Oprogramowanie jest dostarczane w stanie „takim, jakie jest” (_as is_), bez jakichkolwiek gwarancji co do jego działania, przydatności do określonego celu czy kompatybilności.
-2. Licencjodawca nie ponosi odpowiedzialności za jakiekolwiek szkody bezpośrednie, pośrednie, uboczne, wtórne lub szczególne wynikające z korzystania z Oprogramowania lub niemożności korzystania z niego.
-3. Żadne postanowienie niniejszej Umowy nie wyłącza odpowiedzialności Licencjodawcy w zakresie, w jakim nie może być ona wyłączona na mocy obowiązujących przepisów prawa.
+1. The Licensee is entitled to access and use the Software for its intended purpose.  
+2. The Licensee may use the Software only within the environment specified by the Licensor.  
 
 ---
 
-## § 7. Okres obowiązywania i rozwiązanie
+## 4. Restrictions
 
-1. Umowa obowiązuje od momentu uzyskania dostępu do Oprogramowania przez Licencjobiorcę i pozostaje w mocy do czasu jej rozwiązania.
-2. Licencja wygasa automatycznie w przypadku naruszenia przez Licencjobiorcę któregokolwiek z postanowień niniejszej Umowy.
-3. Po wygaśnięciu lub rozwiązaniu Umowy Licencjobiorca jest zobowiązany natychmiast zaprzestać korzystania z Oprogramowania.
+The Licensee shall not:  
 
----
-
-## § 8. Postanowienia końcowe
-
-1. Niniejsza Umowa podlega prawu polskiemu.
-2. Wszelkie spory wynikające z niniejszej Umowy będą rozstrzygane przez sąd właściwy dla siedziby Licencjodawcy.
-3. Jeżeli którekolwiek z postanowień Umowy zostanie uznane za nieważne lub niewykonalne, pozostałe postanowienia pozostają w mocy.
-4. Brak akceptacji warunków niniejszej Umowy oznacza brak prawa do korzystania z Oprogramowania.
+1. Modify, alter, or adapt the Software, including its source code, structure, logic, or graphical interface.  
+2. Decompile, disassemble, reverse engineer, or otherwise attempt to access the source code, unless expressly permitted by applicable law.  
+3. Remove, alter, or obscure any copyright notices, trademarks, or identifiers of the Licensor.  
+4. Distribute, sell, rent, lease, sublicense, or transfer the Software to third parties in any form.  
+5. Create derivative works based on the Software.  
 
 ---
 
-**Licencjodawca:**  
-[Imię i nazwisko / nazwa firmy]  
-[Data i podpis]
+## 5. Intellectual Property
 
-**Licencjobiorca:**  
-Akceptacja Umowy w formie elektronicznej następuje poprzez rozpoczęcie korzystania z Oprogramowania.
+1. The Software and all related intellectual property rights remain the sole property of the Licensor.  
+2. This Agreement does not transfer ownership of any intellectual property to the Licensee.  
+
+---
+
+## 6. Warranty Disclaimer
+
+1. The Software is provided “as is,” without any warranties of any kind, whether express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement.  
+2. The Licensor does not warrant that the Software will be error-free, secure, or uninterrupted.  
+
+---
+
+## 7. Limitation of Liability
+
+1. To the maximum extent permitted by law, the Licensor shall not be liable for any direct, indirect, incidental, consequential, or special damages, including but not limited to loss of profits, business interruption, or loss of data, arising out of the use of or inability to use the Software.  
+2. Nothing in this Agreement shall limit liability where such limitation is prohibited by applicable law.  
+
+---
+
+## 8. Term and Termination
+
+1. This Agreement is effective upon the Licensee’s first access to the Software and remains in force until terminated.  
+2. The License terminates automatically if the Licensee breaches any provision of this Agreement.  
+3. Upon termination, the Licensee must immediately cease all use of the Software.  
+
+---
+
+## 9. Governing Law and Jurisdiction
+
+1. This Agreement shall apply worldwide, without territorial limitation.  
+2. To the extent legally permissible, any disputes arising from this Agreement shall be resolved under the principles of **international commercial law**.  
+3. Where applicable, disputes may be resolved by arbitration in a neutral jurisdiction chosen by the Licensor.  
+
+---
+
+## 10. Miscellaneous
+
+1. If any provision of this Agreement is found invalid or unenforceable, the remaining provisions shall remain in full force and effect.  
+2. Failure to enforce any provision of this Agreement shall not constitute a waiver of that provision.  
+3. Non-acceptance of the terms of this Agreement prohibits the Licensee from using the Software.  
+
+---
+
+**Licensor:**  
+[Full name / company name]  
+[Date and signature]  
+
+**Licensee:**  
+Acceptance of this Agreement in electronic form occurs upon the commencement of use of the Software.  
