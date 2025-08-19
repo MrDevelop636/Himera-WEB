@@ -1,4 +1,4 @@
-const CACHE_NAME = "my-site-cache-v1";
+const CACHE_NAME = "https://himera.sumrive.eu-cache-v1";
 const OFFLINE_URL = "/templates/offline.html";
 
 self.addEventListener("install", (event) => {
