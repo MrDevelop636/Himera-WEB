@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>500 - Błąd serwera</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #fff7e6;
+    color: #ff9800;
+    text-align: center;
+  }
+  h1 {
+    font-size: 6rem;
+    margin: 0;
+    animation: shake 0.8s infinite;
+  }
+  h2 {
+    font-size: 2rem;
+    margin: 10px 0;
+  }
+  p {
+    font-size: 1rem;
+    color: #e65100;
+  }
+  a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    text-decoration: none;
+    color: #fff;
+    background: #ff9800;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  a:hover {
+    background: #e65100;
+  }
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+  }
+</style>
+</head>
+<body>
+  <div>
+    <h1>500</h1>
+    <h2>Błąd serwera</h2>
+    <p>Coś poszło nie tak po stronie serwera. Spróbuj ponownie później.</p>
+    <a href="/">Powrót do strony głównej</a>
+  </div>
+</body>
+</html>
