@@ -14,12 +14,17 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      "@": resolve(__dirname, "./src"),
-      "@css": resolve(__dirname, "./src/css"),
-      "@js": resolve(__dirname, "./src/js"),
-      "@components": resolve(__dirname, "./src/js/components"),
-      "@animation": resolve(__dirname, "./src/js/animation"),
-      "@ui": resolve(__dirname, "./src/js/ui"),
+      // pages
+      "@Home": resolve(__dirname, "./src/pages/Home"),
+      "@About": resolve(__dirname, "./src/pages/About"),
+      // Assets types
+      "@Home/js": resolve(__dirname, "./src/pages/Home/js"),
+      "@Home/css": resolve(__dirname, "./src/pages/Home/css"),
+      "@Home/images": resolve(__dirname, "./src/pages/Home/images"),
+      "@About/js": resolve(__dirname, "./src/pages/About/js"),
+      "@About/css": resolve(__dirname, "./src/pages/About/css"),
+      "@About/images": resolve(__dirname, "./src/pages/About/images"),
+      
     },
   },
   build: {

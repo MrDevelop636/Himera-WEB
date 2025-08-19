@@ -2,23 +2,23 @@
 
 // Animacje
 // import simulateLoading from "./animation/loader.js"; // opcjonalnie
-import CustomCursor from "./js/animation/cursor.min.js";
-import initScrollAnimations2 from "./js/animation/about.min.js";
-import initScrollAnimations from "./js/animation/scroll.min.js";
+import CustomCursor from "@About/js/animation/cursor.min.js";
+import initScrollAnimations2 from "@About/js/animation/about.min.js";
+import initScrollAnimations from "@About/js/animation/scroll.min.js";
 
 // Komponenty
-import initModelsSlider from "./js/components/slider.min.js";
-import initCookiesBanner from "./js/components/cookieBanner.min.js";
+import initModelsSlider from "@About/js/components/slider.min.js";
+import initCookiesBanner from "@About/js/components/cookieBanner.min.js";
 
 // UI
-import initNavbar from "./js/ui/navbar.min.js";
-import initThemeToggle from "./js/ui/theme.min.js";
-import initFormAnimations from "./js/ui/forms.min.js";
-import { initScrollProgress } from "./js/ui/scroll.min.js";
+import initNavbar from "@About/js/ui/navbar.min.js";
+import initThemeToggle from "@About/js/ui/theme.min.js";
+import initFormAnimations from "@About/js/ui/forms.min.js";
+import { initScrollProgress } from "@About/js/ui/scroll.min.js";
 
 // API
 
-import Mailer from "./js/api/mailer.min.js";
+import Mailer from "@About/js/api/mailer.min.js";
 // Inicjalizacja po załadowaniu DOM
 document.addEventListener("DOMContentLoaded", () => {
   // simulateLoading(); // jeśli chcesz włączyć loader
