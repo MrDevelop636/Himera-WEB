@@ -626,10 +626,6 @@ if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/offline.sw.js')
     .then(reg => console.log('Offline SW zarejestrowany', reg))
     .catch(err => console.error('Błąd rejestracji Offline SW:', err));
-
-  navigator.serviceWorker.register('/error.sw.js')
-    .then(reg => console.log('Error SW zarejestrowany', reg))
-    .catch(err => console.error('Błąd rejestracji Error SW:', err));
 }
 
 </script>
