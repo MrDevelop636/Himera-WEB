@@ -8,38 +8,48 @@ export default function initCookiesBanner() {
   const saveCookiePrefsBtn = document.getElementById('saveCookiePreferences');
 
   if (!cookiesBanner || !cookiesConfigIcon || !cookiesModal) {
-    return; // brak wymaganych elementów w DOM
+    return;
   }
 
-  // Inicjalizacja Google Consent Mode
+  // Inicjalizacja dataLayer dla GTM
   window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
 
-  // Domyślne ustawienia consent (przed uzyskaniem zgody)
-  gtag('consent', 'default', {
-    'ad_storage': 'denied',
-    'ad_user_data': 'denied',
-    'ad_personalization': 'denied',
-    'analytics_storage': 'denied',
-    'functionality_storage': 'denied',
-    'personalization_storage': 'denied',
-    'security_storage': 'granted',
-    'wait_for_update': 500
-  });
-
-  // Funkcja aktualizująca consent w Google Tag Manager
-  function updateGoogleConsent() {
+  // Funkcja aktualizująca consent w GTM
+  function updateGTMConsent() {
     const analyticsConsent = localStorage.getItem('analyticsCookies') === 'true' ? 'granted' : 'denied';
     const marketingConsent = localStorage.getItem('marketingCookies') === 'true' ? 'granted' : 'denied';
 
-    gtag('consent', 'update', {
+    // Aktualizacja consent dla GTM
+    window.dataLayer.push({
+      'event': 'consent_update',
       'analytics_storage': analyticsConsent,
       'ad_storage': marketingConsent,
       'ad_user_data': marketingConsent,
-      'ad_personalization': marketingConsent
+      'ad_personalization': marketingConsent,
+      'functionality_storage': 'granted',
+      'personalization_storage': 'granted',
+      'security_storage': 'granted'
     });
+  }
+
+  // Inicjalizacja domyślnego consent (przed uzyskaniem zgody)
+  function setDefaultConsent() {
+    window.dataLayer.push({
+      'event': 'default_consent',
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'functionality_storage': 'denied',
+      'personalization_storage': 'denied',
+      'security_storage': 'granted'
+    });
+  }
+
+  // Ustaw domyślny consent przy pierwszym załadowaniu
+  if (!localStorage.getItem('consentInitialized')) {
+    setDefaultConsent();
+    localStorage.setItem('consentInitialized', 'true');
   }
 
   // Sprawdzenie akceptacji cookies
@@ -50,7 +60,7 @@ export default function initCookiesBanner() {
   } else {
     cookiesConfigIcon.style.display = 'block';
     // Aktualizacja consent po załadowaniu strony jeśli już mamy preferencje
-    updateGoogleConsent();
+    updateGTMConsent();
   }
 
   // Akceptacja wszystkich cookies
@@ -62,8 +72,8 @@ export default function initCookiesBanner() {
     cookiesBanner.classList.remove('active');
     cookiesConfigIcon.style.display = 'block';
     
-    // Aktualizacja Google Consent
-    updateGoogleConsent();
+    // Aktualizacja GTM Consent
+    updateGTMConsent();
   });
 
   // Otwieranie konfiguracji
@@ -94,8 +104,8 @@ export default function initCookiesBanner() {
     cookiesBanner.classList.remove('active');
     cookiesConfigIcon.style.display = 'block';
 
-    // Aktualizacja Google Consent
-    updateGoogleConsent();
+    // Aktualizacja GTM Consent
+    updateGTMConsent();
   });
 
   // Inicjalizacja checkboxów z localStorage
