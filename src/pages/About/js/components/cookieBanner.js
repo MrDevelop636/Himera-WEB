@@ -7,60 +7,52 @@ export default function initCookiesBanner() {
   const closeCookiesModalBtn = document.getElementById('closeCookiesModal');
   const saveCookiePrefsBtn = document.getElementById('saveCookiePreferences');
 
-  if (!cookiesBanner || !cookiesConfigIcon || !cookiesModal) {
-    return;
-  }
+  if (!cookiesBanner || !cookiesConfigIcon || !cookiesModal) return;
 
-  // Inicjalizacja dataLayer dla GTM
+  // Inicjalizacja dataLayer
   window.dataLayer = window.dataLayer || [];
 
-  // Funkcja aktualizująca consent w GTM
-  function updateGTMConsent() {
+  // Funkcja aktualizująca consent w GTM/Google Consent Mode
+  function updateConsent() {
     const analyticsConsent = localStorage.getItem('analyticsCookies') === 'true' ? 'granted' : 'denied';
-    const marketingConsent = localStorage.getItem('marketingCookies') === 'true' ? 'granted' : 'denied';
+    const adConsent = localStorage.getItem('marketingCookies') === 'true' ? 'granted' : 'denied';
 
-    // Aktualizacja consent dla GTM
     window.dataLayer.push({
-      'event': 'consent_update',
+      event: 'consent_update',
       'analytics_storage': analyticsConsent,
-      'ad_storage': marketingConsent,
-      'ad_user_data': marketingConsent,
-      'ad_personalization': marketingConsent,
-      'functionality_storage': 'granted',
-      'personalization_storage': 'granted',
-      'security_storage': 'granted'
+      'ad_storage': adConsent
     });
+
+    // Opcjonalnie, jeśli korzystasz z gtag bezpośrednio:
+    if (typeof gtag === 'function') {
+      gtag('consent', 'update', {
+        'analytics_storage': analyticsConsent,
+        'ad_storage': adConsent
+      });
+    }
   }
 
-  // Inicjalizacja domyślnego consent (przed uzyskaniem zgody)
+  // Domyślny consent przed zgodą użytkownika
   function setDefaultConsent() {
     window.dataLayer.push({
-      'event': 'default_consent',
+      event: 'default_consent',
       'analytics_storage': 'denied',
-      'ad_storage': 'denied',
-      'ad_user_data': 'denied',
-      'ad_personalization': 'denied',
-      'functionality_storage': 'denied',
-      'personalization_storage': 'denied',
-      'security_storage': 'granted'
+      'ad_storage': 'denied'
     });
   }
 
-  // Ustaw domyślny consent przy pierwszym załadowaniu
+  // Ustawienie domyślnego consent przy pierwszym załadowaniu
   if (!localStorage.getItem('consentInitialized')) {
     setDefaultConsent();
     localStorage.setItem('consentInitialized', 'true');
   }
 
-  // Sprawdzenie akceptacji cookies
+  // Pokazanie banneru jeśli brak zgody
   if (!localStorage.getItem('cookiesAccepted')) {
-    setTimeout(() => {
-      cookiesBanner.classList.add('active');
-    }, 1000);
+    setTimeout(() => cookiesBanner.classList.add('active'), 1000);
   } else {
     cookiesConfigIcon.style.display = 'block';
-    // Aktualizacja consent po załadowaniu strony jeśli już mamy preferencje
-    updateGTMConsent();
+    updateConsent();
   }
 
   // Akceptacja wszystkich cookies
@@ -68,28 +60,16 @@ export default function initCookiesBanner() {
     localStorage.setItem('cookiesAccepted', 'true');
     localStorage.setItem('analyticsCookies', 'true');
     localStorage.setItem('marketingCookies', 'true');
-    
+
     cookiesBanner.classList.remove('active');
     cookiesConfigIcon.style.display = 'block';
-    
-    // Aktualizacja GTM Consent
-    updateGTMConsent();
+    updateConsent();
   });
 
   // Otwieranie konfiguracji
-  configureCookiesBtn?.addEventListener('click', () => {
-    cookiesModal.classList.add('active');
-  });
-
-  // Zamknięcie konfiguracji
-  closeCookiesModalBtn?.addEventListener('click', () => {
-    cookiesModal.classList.remove('active');
-  });
-
-  // Ikona konfiguracji
-  cookiesConfigIcon?.addEventListener('click', () => {
-    cookiesModal.classList.add('active');
-  });
+  configureCookiesBtn?.addEventListener('click', () => cookiesModal.classList.add('active'));
+  closeCookiesModalBtn?.addEventListener('click', () => cookiesModal.classList.remove('active'));
+  cookiesConfigIcon?.addEventListener('click', () => cookiesModal.classList.add('active'));
 
   // Zapis preferencji
   saveCookiePrefsBtn?.addEventListener('click', () => {
@@ -103,20 +83,13 @@ export default function initCookiesBanner() {
     cookiesModal.classList.remove('active');
     cookiesBanner.classList.remove('active');
     cookiesConfigIcon.style.display = 'block';
-
-    // Aktualizacja GTM Consent
-    updateGTMConsent();
+    updateConsent();
   });
 
   // Inicjalizacja checkboxów z localStorage
   const analyticsInput = document.getElementById('analyticsCookies');
   const marketingInput = document.getElementById('marketingCookies');
 
-  if (analyticsInput) {
-    analyticsInput.checked = localStorage.getItem('analyticsCookies') !== 'false';
-  }
-
-  if (marketingInput) {
-    marketingInput.checked = localStorage.getItem('marketingCookies') !== 'false';
-  }
+  if (analyticsInput) analyticsInput.checked = localStorage.getItem('analyticsCookies') === 'true';
+  if (marketingInput) marketingInput.checked = localStorage.getItem('marketingCookies') === 'true';
 }
