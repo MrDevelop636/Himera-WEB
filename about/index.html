@@ -353,5 +353,98 @@
       </div>
     </div>
   </footer>
+  <!-- Dodaj to przed zamknięciem </body> -->
+    <div class="cookies-banner" id="cookiesBanner">
+      <div class="cookies-banner__content">
+        <div class="cookies-banner__text">
+          <span class="material-icons cookies-banner__icon">cookie</span>
+          <p>
+            We use cookies to enhance your experience on our website. By
+            continuing to browse, you agree to our use of cookies.
+          </p>
+        </div>
+        <div class="cookies-banner__actions">
+          <button
+            class="btn btn--outline cookies-banner__btn"
+            id="configureCookies"
+          >
+            Configure
+          </button>
+          <button
+            class="btn btn--primary cookies-banner__btn"
+            id="acceptCookies"
+          >
+            Accept All
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="cookies-config-icon"
+      id="cookiesConfigIcon"
+      style="display: none"
+    >
+      <button class="cookies-config-icon__btn" aria-label="Cookie settings">
+        <span class="material-icons cookies-icon">settings</span>
+      </button>
+    </div>
+
+    <div class="cookies-modal" id="cookiesModal">
+      <div class="cookies-modal__content">
+        <div class="cookies-modal__header">
+          <h3 class="cookies-modal__title">Cookie Preferences</h3>
+          <button class="cookies-modal__close" id="closeCookiesModal">
+            <span class="material-icons">close</span>
+          </button>
+        </div>
+        <div class="cookies-modal__body">
+          <div class="cookies-category">
+            <div class="cookies-category__header">
+              <label class="cookies-category__toggle">
+                <input type="checkbox" checked disabled />
+                <span class="cookies-category__slider"></span>
+              </label>
+              <h4 class="cookies-category__title">Essential Cookies</h4>
+            </div>
+            <p class="cookies-category__description">
+              These cookies are necessary for the website to function and cannot
+              be switched off.
+            </p>
+          </div>
+
+          <div class="cookies-category">
+            <div class="cookies-category__header">
+              <label class="cookies-category__toggle">
+                <input type="checkbox" id="analyticsCookies" checked />
+                <span class="cookies-category__slider"></span>
+              </label>
+              <h4 class="cookies-category__title">Analytics Cookies</h4>
+            </div>
+            <p class="cookies-category__description">
+              Allow us to analyze website usage to improve performance.
+            </p>
+          </div>
+
+          <div class="cookies-category">
+            <div class="cookies-category__header">
+              <label class="cookies-category__toggle">
+                <input type="checkbox" id="marketingCookies" checked />
+                <span class="cookies-category__slider"></span>
+              </label>
+              <h4 class="cookies-category__title">Marketing Cookies</h4>
+            </div>
+            <p class="cookies-category__description">
+              Used to track visitors across websites for targeted advertising.
+            </p>
+          </div>
+        </div>
+        <div class="cookies-modal__footer">
+          <button class="btn btn--primary" id="saveCookiePreferences">
+            Save Preferences
+          </button>
+        </div>
+      </div>
+    </div>
 </body>
 </html>
