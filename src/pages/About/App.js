@@ -8,7 +8,7 @@ import initScrollAnimations from "@About/js/animation/scroll.min.js";
 
 // Komponenty
 import initModelsSlider from "@About/js/components/slider.min.js";
-import initCookiesBanner from "@About/js/components/cookieBanner.min.js";
+import initCookiesBanner from "@About/js/components/cookieBanner.js";
 
 // UI
 import initNavbar from "@About/js/ui/navbar.min.js";

@@ -11,13 +11,36 @@ export default function initCookiesBanner() {
     return; // brak wymaganych elementów w DOM
   }
 
-  // 🔹 Domyślnie wszystkie zgody "denied"
+  // Inicjalizacja Google Consent Mode
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+
+  // Domyślne ustawienia consent (przed uzyskaniem zgody)
   gtag('consent', 'default', {
-    ad_storage: 'denied',
-    ad_user_data: 'denied',
-    ad_personalization: 'denied',
-    analytics_storage: 'denied',
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'functionality_storage': 'denied',
+    'personalization_storage': 'denied',
+    'security_storage': 'granted',
+    'wait_for_update': 500
   });
+
+  // Funkcja aktualizująca consent w Google Tag Manager
+  function updateGoogleConsent() {
+    const analyticsConsent = localStorage.getItem('analyticsCookies') === 'true' ? 'granted' : 'denied';
+    const marketingConsent = localStorage.getItem('marketingCookies') === 'true' ? 'granted' : 'denied';
+
+    gtag('consent', 'update', {
+      'analytics_storage': analyticsConsent,
+      'ad_storage': marketingConsent,
+      'ad_user_data': marketingConsent,
+      'ad_personalization': marketingConsent
+    });
+  }
 
   // Sprawdzenie akceptacji cookies
   if (!localStorage.getItem('cookiesAccepted')) {
@@ -26,42 +49,39 @@ export default function initCookiesBanner() {
     }, 1000);
   } else {
     cookiesConfigIcon.style.display = 'block';
-
-    // Przy odświeżeniu strony odtwarzamy preferencje
-    applyConsent({
-      analytics: localStorage.getItem('analyticsCookies') === 'true',
-      marketing: localStorage.getItem('marketingCookies') === 'true',
-    });
+    // Aktualizacja consent po załadowaniu strony jeśli już mamy preferencje
+    updateGoogleConsent();
   }
 
-  // 🔹 Akceptacja wszystkich cookies
+  // Akceptacja wszystkich cookies
   acceptCookiesBtn?.addEventListener('click', () => {
     localStorage.setItem('cookiesAccepted', 'true');
     localStorage.setItem('analyticsCookies', 'true');
     localStorage.setItem('marketingCookies', 'true');
-
+    
     cookiesBanner.classList.remove('active');
     cookiesConfigIcon.style.display = 'block';
-
-    applyConsent({ analytics: true, marketing: true });
+    
+    // Aktualizacja Google Consent
+    updateGoogleConsent();
   });
 
-  // 🔹 Otwieranie konfiguracji
+  // Otwieranie konfiguracji
   configureCookiesBtn?.addEventListener('click', () => {
     cookiesModal.classList.add('active');
   });
 
-  // 🔹 Zamknięcie konfiguracji
+  // Zamknięcie konfiguracji
   closeCookiesModalBtn?.addEventListener('click', () => {
     cookiesModal.classList.remove('active');
   });
 
-  // 🔹 Ikona konfiguracji
+  // Ikona konfiguracji
   cookiesConfigIcon?.addEventListener('click', () => {
     cookiesModal.classList.add('active');
   });
 
-  // 🔹 Zapis preferencji
+  // Zapis preferencji
   saveCookiePrefsBtn?.addEventListener('click', () => {
     const analyticsChecked = document.getElementById('analyticsCookies')?.checked;
     const marketingChecked = document.getElementById('marketingCookies')?.checked;
@@ -74,30 +94,19 @@ export default function initCookiesBanner() {
     cookiesBanner.classList.remove('active');
     cookiesConfigIcon.style.display = 'block';
 
-    applyConsent({
-      analytics: analyticsChecked,
-      marketing: marketingChecked,
-    });
+    // Aktualizacja Google Consent
+    updateGoogleConsent();
   });
 
-  // 🔹 Inicjalizacja checkboxów z localStorage
-  if (localStorage.getItem('analyticsCookies') === 'false') {
-    const analyticsInput = document.getElementById('analyticsCookies');
-    if (analyticsInput) analyticsInput.checked = false;
+  // Inicjalizacja checkboxów z localStorage
+  const analyticsInput = document.getElementById('analyticsCookies');
+  const marketingInput = document.getElementById('marketingCookies');
+
+  if (analyticsInput) {
+    analyticsInput.checked = localStorage.getItem('analyticsCookies') !== 'false';
   }
 
-  if (localStorage.getItem('marketingCookies') === 'false') {
-    const marketingInput = document.getElementById('marketingCookies');
-    if (marketingInput) marketingInput.checked = false;
-  }
-
-  // 🔹 Funkcja wysyłająca zgody do Google Consent Mode
-  function applyConsent(prefs) {
-    gtag('consent', 'update', {
-      ad_storage: prefs.marketing ? 'granted' : 'denied',
-      ad_user_data: prefs.marketing ? 'granted' : 'denied',
-      ad_personalization: prefs.marketing ? 'granted' : 'denied',
-      analytics_storage: prefs.analytics ? 'granted' : 'denied',
-    });
+  if (marketingInput) {
+    marketingInput.checked = localStorage.getItem('marketingCookies') !== 'false';
   }
 }
