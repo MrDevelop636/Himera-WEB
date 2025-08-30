@@ -625,16 +625,35 @@
     </script>
     <script>
       /**
-       * Konfiguracja Strapi
+       * Pobiera konfigurację Strapi z backendu PHP
+       * @returns {Promise<{strapiUrl: string, strapiToken: string} | null>}
        */
-      const STRAPI_CONFIG = {
-        url: "http://localhost:1337/api/hero?populate=*",
-        token:
-          "beaffa107c34cafdfb70b9ea36d53f35e2bc38b87bd375d32541305f58887f9837389c841473e02541ec02e48478f838a018d54ccf09b9039c3e54e89c881e512209829bdb246d55baa96ab88f3c6dd251f51570fb9487bf9d68b38c6fc84193fc6ce23eb86d0e25e98c5af6821d51f12cf7c38074b9bc63d22b679cb25e0423", // Wstaw swój token
-      };
+      async function getStrapiConfig() {
+        try {
+          const response = await fetch(
+            "https://himera.sumrive.eu/api/config.php",
+            {
+              method: "GET",
+              headers: { Accept: "application/json" },
+            }
+          );
+
+          if (!response.ok) {
+            console.error(
+              `Błąd pobierania konfiguracji: ${response.status} ${response.statusText}`
+            );
+            return null;
+          }
+
+          return await response.json();
+        } catch (error) {
+          console.error("Nie udało się pobrać konfiguracji Strapi:", error);
+          return null;
+        }
+      }
 
       /**
-       * Funkcja pomocnicza do konwersji Rich Text z Strapi na HTML
+       * Konwertuje blok Rich Text z Strapi na HTML
        * @param {Array} richTextBlocks
        * @returns {string}
        */
@@ -646,55 +665,59 @@
       }
 
       /**
-       * Funkcja do załadowania danych Hero z Strapi
+       * Aktualizuje sekcję Hero w DOM na podstawie danych z Strapi
+       * @param {Object} data
+       */
+      function updateHeroDOM(data) {
+        const heroTitle = document.getElementById("heroTitle");
+        const heroSubtitle = document.getElementById("heroSubtitle");
+        const heroCTA = document.getElementById("heroCTA");
+        const heroSection = document.querySelector(".hero");
+
+        if (heroTitle) heroTitle.textContent = data.Title || "";
+        if (heroSubtitle) heroSubtitle.innerHTML = parseRichText(data.Subtitle);
+        if (heroCTA) {
+          heroCTA.textContent = data.CTA_Text || "Learn More";
+          heroCTA.href = data.CTA_Link || "#";
+        }
+        if (heroSection && data.BG_Image?.url) {
+          const imgUrl = `${window.location.origin}${data.BG_Image.url}`;
+          heroSection.style.backgroundImage = `url('${imgUrl}')`;
+        }
+      }
+
+      /**
+       * Ładuje dane Hero z Strapi i aktualizuje DOM
        */
       async function loadHero() {
+        const STRAPI_CONFIG = await getStrapiConfig();
+        if (!STRAPI_CONFIG) return;
+
         try {
-          const response = await fetch(STRAPI_CONFIG.url, {
+          const response = await fetch(STRAPI_CONFIG.strapiUrl, {
             headers: {
-              Authorization: `Bearer ${STRAPI_CONFIG.token}`,
+              Authorization: `Bearer ${STRAPI_CONFIG.strapiToken}`,
               Accept: "application/json",
             },
           });
 
           if (!response.ok) {
-            throw new Error(
-              `Błąd HTTP: ${response.status} ${response.statusText}`
+            console.error(
+              `Błąd pobierania Hero: ${response.status} ${response.statusText}`
             );
+            return;
           }
 
           const { data } = await response.json();
-
           if (!data) {
             console.warn("Brak danych Hero w Strapi.");
             return;
           }
 
-          // Aktualizacja elementów DOM
-          const heroTitle = document.getElementById("heroTitle");
-          const heroSubtitle = document.getElementById("heroSubtitle");
-          const heroCTA = document.getElementById("heroCTA");
-
-          if (heroTitle) heroTitle.innerHTML = data.Title || "";
-          if (heroSubtitle)
-            heroSubtitle.innerHTML = parseRichText(data.Subtitle);
-          if (heroCTA) {
-            heroCTA.innerText = data.CTA_Text || "Learn More";
-            heroCTA.href = data.CTA_Link || "#";
-          }
-
-          // Opcjonalnie: ustaw tło
-          if (data.BG_Image?.url) {
-            const heroSection = document.querySelector(".hero");
-            if (heroSection) {
-              const imgUrl = `${window.location.origin}${data.BG_Image.url}`;
-              heroSection.style.backgroundImage = `url('${imgUrl}')`;
-            }
-          }
-
+          updateHeroDOM(data);
           console.info("Hero załadowany z Strapi:", data);
-        } catch (err) {
-          console.error("Błąd pobierania Hero:", err);
+        } catch (error) {
+          console.error("Błąd pobierania Hero:", error);
         }
       }
 
