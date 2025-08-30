@@ -16,7 +16,7 @@ if (in_array($origin, $allowedOrigins)) {
     exit;
 }
 
-$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv = Dotenv::createImmutable(__DIR__ . '/..');
 $dotenv->load();
 
 echo json_encode([
