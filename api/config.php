@@ -5,7 +5,7 @@ use Dotenv\Dotenv;
 header('Content-Type: application/json; charset=utf-8');
 
 // CORS – dopuszczamy tylko Twój frontend
-$allowedOrigins = ['http://localhost:5173', 'https://cms.himera.sumrive.eu'];
+$allowedOrigins = ['http://localhost:5173', 'https://himera.sumrive.eu'];
 $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
 if (in_array($origin, $allowedOrigins)) {
     header("Access-Control-Allow-Origin: $origin");
