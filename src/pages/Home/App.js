@@ -19,6 +19,7 @@ import { initScrollProgress } from "@Home/js/ui/scroll.min.js";
 // API
 
 import Mailer from "@Home/js/api/mailer.min.js";
+import { loadHomePage } from "@Home/js/api/strapi.js";
 // Inicjalizacja po załadowaniu DOM
 document.addEventListener("DOMContentLoaded", () => {
   // simulateLoading(); // jeśli chcesz włączyć loader
@@ -32,4 +33,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initScrollProgress(); // pasek postępu scrolla
   initCounters(); // animacja liczników
   Mailer();
+  loadHomePage();
 });
